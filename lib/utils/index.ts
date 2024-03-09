@@ -4,3 +4,7 @@ export {
 export {
   isDefined, isNotDefined, toNull, toUndefined,
 } from './nullish-utils';
+
+export {
+  toUrl,
+} from './url-utils';
