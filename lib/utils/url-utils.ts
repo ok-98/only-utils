@@ -1,5 +1,5 @@
 import {URL} from 'url';
-import {TOrUndefined} from '../types';
+import {TOrUndefined} from "../types";
 
 export const toUrl = (value: string | { toString: () => string }, base?: string | URL): TOrUndefined<URL> => {
   try {
