@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-pnpm pretty-quick --staged
+pnpx pretty-quick --staged
