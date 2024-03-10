@@ -5,7 +5,7 @@
 [![bundle][bundle-src]][bundle-href]
 [![Codecov][codecov-src]][codecov-href]
 
-only nice l y utils.
+**O**nly **N**ice **L**ean **Y**ummy **-** **UTILS**.
 
 ## Install
 

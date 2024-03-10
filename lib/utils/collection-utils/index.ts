@@ -4,7 +4,7 @@ export {
   filterNullishArray,
   filterNullishMap,
   filterNullishSet,
-  hasApproximatly,
+  hasApproximately as hasApproximatly,
   hasBetween,
   hasExactly,
   hasLessThan,

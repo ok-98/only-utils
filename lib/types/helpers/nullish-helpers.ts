@@ -1,4 +1,3 @@
-
 export type TOrUndefined<T> = T | undefined;
 
 export type TOrNull<T> = T | null;

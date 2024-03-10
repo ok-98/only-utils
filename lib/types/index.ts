@@ -9,4 +9,17 @@ export type {
   TOrNull,
   TOrUndefined,
 } from './helpers/nullish-helpers';
-export type { Primitive } from './helpers/primitive-helpers';
+export type { Primitive, PrimitiveNullish } from './helpers/primitive-helpers';
+export type {
+  AnyFunction,
+  ArrayElement,
+  Awaited,
+  Nested,
+  Param,
+  ParamArgs,
+  PromiseOrAwaited,
+  RecordKey,
+  RecordKeyValue,
+  RecordValue,
+  SimpleFunction,
+} from './helpers/type-helpers';

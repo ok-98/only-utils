@@ -162,7 +162,7 @@ export const hasBetween = <T>(
   return arr.length >= start && arr.length < end;
 };
 
-export const hasApproximatly = <T>(
+export const hasApproximately = <T>(
   value: CollectionLike<T>,
   x: number,
   approxRange: number,
