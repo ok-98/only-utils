@@ -1,6 +1,6 @@
 # only-utils
 
-**O**nly **N**ice **L**ean **Y**ummy **-** **UTILS**.
+**O**nly **N**ice **L**ean **Y**are **-** **UTILS**.
 
 ## Install
 
