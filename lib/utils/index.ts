@@ -2,10 +2,10 @@ export { isNegative, isPositive } from './number-utils';
 export { hasKey, isEmptyObject } from './object-utils';
 
 export {
+  asValueOrNull,
+  asValueOrUndefined,
   isDefined,
   isNotDefined,
-  toNull,
-  toUndefined,
   transformIfDefined,
 } from './nullish-utils';
 
@@ -15,7 +15,10 @@ export * from './collection-utils';
 
 export { EMPTY_ARRAY, EMPTY_OBJECT } from './const-utils';
 
-export { EMPTY_ARROW_FUNCTION } from './function-utils';
+export {
+  EMPTY_ARROW_FUNCTION,
+  EMPTY_ASYNC_ARROW_FUNCTION,
+} from './function-utils';
 
 export {
   braceYourself,

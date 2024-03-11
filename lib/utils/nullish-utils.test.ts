@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import {
+  asValueOrNull,
+  asValueOrUndefined,
   isDefined,
   isNotDefined,
-  toNull,
-  toUndefined,
   transformIfDefined,
 } from './nullish-utils';
 
@@ -39,29 +39,29 @@ describe('isNotDefined', () => {
 
 describe('toUndefined', () => {
   it('should return the value if it is defined', () => {
-    expect(toUndefined('string')).toBe('string');
-    expect(toUndefined(0)).toBe(0);
+    expect(asValueOrUndefined('string')).toBe('string');
+    expect(asValueOrUndefined(0)).toBe(0);
   });
 
   it('should return undefined if the value is null or undefined', () => {
-    expect(toUndefined(null)).toBeUndefined();
-    expect(toUndefined(undefined)).toBeUndefined();
+    expect(asValueOrUndefined(null)).toBeUndefined();
+    expect(asValueOrUndefined(undefined)).toBeUndefined();
   });
 });
 
 describe('toNull', () => {
   it('should return the value if it is defined', () => {
-    expect(toNull('string')).toBe('string');
-    expect(toNull(0)).toBe(0);
+    expect(asValueOrNull('string')).toBe('string');
+    expect(asValueOrNull(0)).toBe(0);
   });
 
   it('should return null if the value is undefined', () => {
-    expect(toNull(undefined)).toBeNull();
+    expect(asValueOrNull(undefined)).toBeNull();
   });
 
   // Note: Assuming the behavior is to keep null as null
   it('should return null if the value is null', () => {
-    expect(toNull(null)).toBeNull();
+    expect(asValueOrNull(null)).toBeNull();
   });
 });
 
