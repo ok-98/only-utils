@@ -23,7 +23,7 @@
     "treecheck": "pnpm build && agadoo dist/main.js",
     "changeset:log": "pnpm changeset",
     "changeset:version": "pnpm changeset version",
-    "release": "pnpm changeset publish",
+    "release": "pnpm build && pnpm changeset publish",
     "prepare": "husky"
   },
   "peerDependencies": {
