@@ -1,5 +1,11 @@
 # only-utils
 
+## 0.1.2
+
+### Patch Changes
+
+- 11651ee: adjusted info
+
 ## 0.1.1
 
 ### Patch Changes
