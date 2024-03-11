@@ -19,7 +19,7 @@ jobs:
           node-version: 20
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
-      - run: npm build
+      - run: pnpm build
        
   publish-npm:
     needs: build
