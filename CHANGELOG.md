@@ -1,5 +1,14 @@
 # only-utils
 
+## 0.1.1
+
+### Patch Changes
+
+- 0afe43f: added license
+- e085ff5: renamed exports
+- 6bcbffd: added empty arrow function
+- 4e7844d: renamed some utils
+
 ## 0.1.0
 
 ### Minor Changes

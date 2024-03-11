@@ -10,9 +10,9 @@ export const isNotDefined = <T>(value: Optional<T>): value is Nullish =>
 export const toU = <T>(value: Optional<T>): TOrUndefined<T> =>
   isDefined(value) ? value : undefined;
 
-export const toUndefined = toU;
+export const asValueOrUndefined = toU;
 
-export const toNull = <T>(value: Optional<T>): TOrNull<T> =>
+export const asValueOrNull = <T>(value: Optional<T>): TOrNull<T> =>
   isDefined(value) ? value : null;
 
 export const transformIfDefined = <T, R>(
