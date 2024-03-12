@@ -1,5 +1,11 @@
 # only-utils
 
+## 0.1.4
+
+### Patch Changes
+
+- f000b65: minor adjustments
+
 ## 0.1.3
 
 ### Patch Changes
