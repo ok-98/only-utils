@@ -4,6 +4,7 @@
 
 ### Patch Changes
 
+- f000b65: minor adjustments
 - 1c67bd7: change to gh packages
 
 ## 0.1.2

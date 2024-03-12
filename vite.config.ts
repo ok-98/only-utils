@@ -10,7 +10,7 @@ export default defineConfig({
     lib: {
       fileName: 'main',
       name: 'only-utils',
-      entry: resolve(__dirname, 'lib/main.ts'),
+      entry: resolve(__dirname, 'lib/utils/index.ts'),
       formats: ['es'],
     },
     rollupOptions: {

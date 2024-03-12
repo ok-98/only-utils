@@ -1,6 +1,7 @@
 # only-utils
 
 **O**nly **N**ice **L**ean **Y**are **-** **UTILS**.
+WORK IN PROGRESS
 
 ## Install
 
@@ -24,4 +25,8 @@ bun install only-utils
 
 ## Utils
 
+TODO: list all utils
+
 ## Type-Utils
+
+TODO: list all types
