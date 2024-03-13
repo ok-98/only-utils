@@ -1,7 +1,9 @@
 {
   "name": "only-utils",
-  "private": false,
   "version": "0.1.4",
+  "license": "MIT",
+  "sideEffects": false,
+  "description": "Only Nice Lean Yare - UTILS ...and some types",
   "repository": {
     "type": "git",
     "url": "https://github.com/kacper-olszanski/only-utils.git"
