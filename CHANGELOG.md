@@ -1,5 +1,11 @@
 # only-utils
 
+## 0.1.5
+
+### Patch Changes
+
+- ba4b7ac: added identity function
+
 ## 0.1.4
 
 ### Patch Changes
