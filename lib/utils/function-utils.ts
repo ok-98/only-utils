@@ -4,3 +4,5 @@ export const EMPTY_ASYNC_ARROW_FUNCTION = async (
 ): Promise<void> => {};
 export const EAF = EMPTY_ARROW_FUNCTION;
 export const EAAF = EMPTY_ARROW_FUNCTION;
+
+export const identity = <T>(value: T) => value;

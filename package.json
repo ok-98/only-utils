@@ -16,6 +16,17 @@
     "email": "dev@rvtr.media",
     "url": "https://github.com/kacper-olszanski/"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "util",
+    "utility",
+    "types",
+    "modules",
+    "es",
+    "ts"
+  ],
   "files": [
     "dist"
   ],

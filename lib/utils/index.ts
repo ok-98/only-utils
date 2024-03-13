@@ -18,6 +18,7 @@ export { EMPTY_ARRAY, EMPTY_OBJECT } from './const-utils';
 export {
   EMPTY_ARROW_FUNCTION,
   EMPTY_ASYNC_ARROW_FUNCTION,
+  identity,
 } from './function-utils';
 
 export {
