@@ -1,5 +1,11 @@
 # only-utils
 
+## 0.1.4
+
+### Patch Changes
+
+- 9c2d827: moved license
+
 ## 0.1.3
 
 ### Patch Changes
