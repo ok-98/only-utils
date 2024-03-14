@@ -1,5 +1,11 @@
 # only-utils
 
+## 0.2.6
+
+### Patch Changes
+
+- a402453: added tsdoc and some tests
+
 ## 0.1.5
 
 ### Patch Changes
