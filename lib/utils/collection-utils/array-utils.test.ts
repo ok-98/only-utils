@@ -84,6 +84,9 @@ describe('mapRecursiveArray', () => {
   // Test for handling empty arrays
   it('should return an empty array for an empty input', () => {
     expect(mapRecursiveArray([], (x: number) => x * 2)).toEqual([]);
+    expect(mapRecursiveArray(undefined, (x: number) => x * 2)).toEqual(
+      undefined,
+    );
   });
 
   // Test for ensuring the original array is unchanged
