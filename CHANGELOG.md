@@ -1,5 +1,15 @@
 # only-utils
 
+## 0.2.0
+
+### Minor Changes
+
+- 365221b: restructure
+
+### Patch Changes
+
+- 499e5a8: added browser utils
+
 ## 0.1.5
 
 ### Patch Changes
