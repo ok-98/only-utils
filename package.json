@@ -9,8 +9,26 @@
     "url": "https://github.com/kacper-olszanski/only-utils.git"
   },
   "type": "module",
-  "main": "dist/main.js",
-  "types": "dist/main.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "exports": {
+    "./core": "./dist/utils.js",
+    "./browser": "./dist/browser-utils.js"
+  },
+  "types": "dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "./types": [
+        "./dist/types/index.d.ts"
+      ],
+      "./core": [
+        "./dist/utils/index.d.ts"
+      ],
+      "./browser": [
+        "./dist/browser-utils/index.d.ts"
+      ]
+    }
+  },
   "author": {
     "name": "Kacper Olszanski",
     "email": "dev@rvtr.media",

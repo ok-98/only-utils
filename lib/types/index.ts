@@ -23,3 +23,5 @@ export type {
   RecordValue,
   SimpleFunction,
 } from './helpers/type-helpers';
+
+export type { CssVar, CssVarName } from './helpers/browser-helpers';

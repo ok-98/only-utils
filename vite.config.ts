@@ -7,9 +7,12 @@ export default defineConfig({
   plugins: [dts({ include: ['lib'], exclude: ['**/*.test.ts'] })],
   build: {
     lib: {
-      fileName: 'main',
       name: 'only-utils',
-      entry: [resolve(__dirname, 'lib/utils/index.ts')],
+      entry: {
+        index: resolve(__dirname, 'lib/index.ts'),
+        utils: resolve(__dirname, 'lib/utils/index.ts'),
+        'browser-utils': resolve(__dirname, 'lib/browser-utils/index.ts'),
+      },
       formats: ['es'],
     },
     rollupOptions: {

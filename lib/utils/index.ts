@@ -2,6 +2,8 @@ export { isNegative, isPositive } from './number-utils';
 export { hasKey, isEmptyObject } from './object-utils';
 
 export {
+  areDefined,
+  areNotDefined,
   asValueOrNull,
   asValueOrUndefined,
   isDefined,
