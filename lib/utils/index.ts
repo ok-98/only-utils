@@ -2,6 +2,8 @@ export { isNegative, isPositive } from './number-utils';
 export { hasKey, isEmptyObject } from './object-utils';
 
 export {
+  areDefined,
+  areNotDefined,
   asValueOrNull,
   asValueOrUndefined,
   isDefined,
@@ -11,6 +13,7 @@ export {
 
 export { toUrl } from './url-utils';
 
+export * from './browser';
 export * from './collection-utils';
 
 export { EMPTY_ARRAY, EMPTY_OBJECT } from './const-utils';

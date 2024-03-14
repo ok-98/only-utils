@@ -1,3 +1,4 @@
+export type { CssVar, CssVarName } from './helpers/browser-helpers';
 export type {
   ArrayLike,
   Collection,

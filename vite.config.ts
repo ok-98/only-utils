@@ -10,7 +10,7 @@ export default defineConfig({
       fileName: 'main',
       name: 'only-utils',
       entry: [resolve(__dirname, 'lib/utils/index.ts')],
-      formats: ['es'],
+      formats: ['es', 'cjs'],
     },
     rollupOptions: {
       external: ['lodash-es', 'url'],
