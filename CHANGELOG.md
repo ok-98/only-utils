@@ -1,21 +1,11 @@
 # only-utils
 
-## 0.2.6
-
-### Patch Changes
-
-- a402453: added tsdoc and some tests
-
-## 0.1.5
-
-### Patch Changes
-
-- ba4b7ac: added identity function
-
 ## 0.1.4
 
 ### Patch Changes
 
+- a402453: added tsdoc and some tests
+- ba4b7ac: added identity function
 - 9c2d827: moved license
 
 ## 0.1.3
