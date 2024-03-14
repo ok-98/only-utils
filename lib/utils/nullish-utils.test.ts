@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
+  areDefined,
+  areNotDefined,
   asValueOrNull,
   asValueOrUndefined,
   isDefined,
@@ -34,6 +36,19 @@ describe('isNotDefined', () => {
   it('should return true for null and undefined', () => {
     expect(isNotDefined(null)).toBe(true);
     expect(isNotDefined(undefined)).toBe(true);
+  });
+});
+
+describe('areDefined & areNotDefined', () => {
+  it('should test areDefined', () => {
+    expect(areDefined([1, 'string', true])).toBe(true);
+    expect(areDefined([1, null, true])).toBe(false);
+    expect(areDefined([undefined, 'string', true])).toBe(false);
+  });
+  it('should test areNotDefined', () => {
+    expect(areNotDefined([null, undefined, null])).toBe(true);
+    expect(areNotDefined([1, null, true])).toBe(false);
+    expect(areNotDefined([undefined, 'string', true])).toBe(false);
   });
 });
 
