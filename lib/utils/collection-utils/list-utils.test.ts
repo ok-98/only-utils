@@ -28,6 +28,10 @@ describe('isEmpty', () => {
   it('should return false for a non-empty string', () => {
     expect(isEmpty('text')).toBe(false);
   });
+
+  it('should return false ', () => {
+    expect(isEmpty(235)).toBe(false);
+  });
 });
 
 describe('nonEmpty', () => {
@@ -54,10 +58,11 @@ describe('emptyListToUndefined', () => {
 describe('hasMoreThan', () => {
   it('should return true if an array has more than X elements', () => {
     expect(hasMoreThan([1, 2, 3, 4], 3)).toBe(true);
+    expect(hasMoreThan([1, 2, 3, 4], 3, true)).toBe(true);
   });
 
   it('should return false if an array does not have more than X elements', () => {
-    expect(hasMoreThan([1, 2], 3)).toBe(false);
+    expect(hasMoreThan([1, 2], 3, true)).toBe(false);
   });
 });
 
@@ -90,11 +95,15 @@ describe('hasExactly', () => {
 
 describe('hasBetween', () => {
   it('should return true if an array length is between the given range', () => {
-    expect(hasBetween([1, 2, 3], [2, 4])).toBe(true);
+    expect(hasBetween([1, 2, 3], [1, 4])).toBe(true);
+    expect(hasBetween([1, 2, 3], [2, 4], 'excluding')).toBe(true);
+    expect(hasBetween([1, 2, 3], [2, 4], 'including')).toBe(true);
   });
 
   it('should return false if an array length is not between the given range', () => {
-    expect(hasBetween([1, 2, 3, 4], [1, 3])).toBe(false);
+    expect(hasBetween([1, 2, 3, 4], [1, 2])).toBe(false);
+    expect(hasBetween([1, 2, 3, 4], [1, 3], 'excluding')).toBe(false);
+    expect(hasBetween([1, 2, 3, 4], [1, 3], 'including')).toBe(false);
   });
 });
 
