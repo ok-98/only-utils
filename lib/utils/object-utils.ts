@@ -1,4 +1,6 @@
 import { isEqual } from 'lodash-es';
+import { AnyFunction } from '../main.ts';
+import { ArrayWithAtLeast2 } from '../types/helpers/collection-helpers.ts';
 import {
   Primitive,
   PrimitiveNullish,
@@ -27,6 +29,29 @@ export const hasKey = <T extends object>(obj: T, key: any): key is keyof T =>
 export const isEmptyObject = <T extends object>(value: T) =>
   isEqual(value, EMPTY_OBJECT) ||
   filterNullishArray(Object.values(value)).length === 0;
+
+/**
+ * Checks if multiple values are equal.
+ *
+ * @template T - The type of the values.
+ * @param {...ArrayWithAtLeast2<T>} values - The values to compare.
+ * @returns {boolean} - True if all values are equal, false otherwise.
+ */
+export const areEqual = <T>(...values: ArrayWithAtLeast2<T>): boolean => {
+  const [reference] = values;
+  if (values.length < 2) {
+    return false;
+  }
+  if (values.length === 2) {
+    return isEqual(reference, values[1]);
+  }
+  for (let i = 1; i < values.length; i++) {
+    if (!isEqual(reference, values[i])) {
+      return false;
+    }
+  }
+  return true;
+};
 
 /**
  * Checks if a value is a {@link Primitive} type.
@@ -59,3 +84,25 @@ export const isPrimitiveOrNull = (
 
   return isPrimitive(value);
 };
+
+/**
+ * Casts a value to the specified type.
+ *
+ * @param value - The value to be casted.
+ * @returns The casted value.
+ * @template T - The type to cast the value to.
+ */
+export const asType = <T>(value: unknown): T => value as T;
+
+/**
+ * Checks if a value matches a specific type.
+ *
+ * @template T - The type to check against.
+ * @param value - The value to check.
+ * @param typeChecker - A function that checks if the value matches the specified type.
+ * @returns True if the value matches the specified type, false otherwise.
+ */
+export const isType = <T>(
+  value: unknown,
+  typeChecker: AnyFunction<boolean>,
+): value is T => typeChecker(value);

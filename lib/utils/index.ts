@@ -1,11 +1,20 @@
 export { isNegative, isPositive } from './number-utils';
-export { hasKey, isEmptyObject } from './object-utils';
+export {
+  areEqual,
+  asType,
+  hasKey,
+  isEmptyObject,
+  isPrimitive,
+  isPrimitiveOrNull,
+  isType,
+} from './object-utils';
 
 export {
   areDefined,
   areNotDefined,
   asValueOrNull,
   asValueOrUndefined,
+  executeIfDefined,
   isDefined,
   isNotDefined,
   transformIfDefined,
@@ -30,3 +39,5 @@ export {
   quote,
   undefinedToEmptyString,
 } from './string-utils';
+
+export { optional } from './optional-util';

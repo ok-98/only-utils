@@ -1,5 +1,10 @@
-import type { Nullish, Optional, TOrNull, TOrUndefined } from '../types';
-import { SimpleFunction } from '../types/helpers/type-helpers';
+import type {
+  Nullish,
+  Optional,
+  SimpleFunction,
+  TOrNull,
+  TOrUndefined,
+} from '../types';
 
 /**
  * Checks if a value is defined (not null or undefined).
@@ -8,7 +13,7 @@ import { SimpleFunction } from '../types/helpers/type-helpers';
  * @returns `true` if the value is defined, `false` otherwise.
  */
 export const isDefined = <T>(value: Optional<T>): value is T =>
-  value !== null && value !== undefined;
+  value !== null && value !== undefined && value !== void 0;
 
 /**
  * Checks if all values in an array are defined.
@@ -78,3 +83,15 @@ export const transformIfDefined = <T, R>(
   value: Optional<T>,
   mapper: SimpleFunction<T, R>,
 ): TOrUndefined<R> => (isDefined(value) ? mapper(value) : undefined);
+
+/**
+ * Executes the provided callback function if the value is defined.
+ *
+ * @template T - The type of the value.
+ * @param value - The value to check for definedness.
+ * @param callback - The callback function to execute if the value is defined.
+ */
+export const executeIfDefined = <T>(
+  value: Optional<T>,
+  callback: SimpleFunction<T>,
+): void => transformIfDefined(value, callback);

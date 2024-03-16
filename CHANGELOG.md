@@ -1,5 +1,13 @@
 # only-utils
 
+## 0.1.6
+
+### Patch Changes
+
+- added CtorParamType ParamTypes, optional- and requiredkeys, instancetype, mutable, prettify
+- added ArrayElement, SetLike, RecursiveArray, NonEmptyArray
+- added optional like in java
+
 ## 0.1.5
 
 ### Patch Changes

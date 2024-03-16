@@ -8,44 +8,20 @@ export type Nested<T, ChildKey extends string = 'children'> = T & {
 };
 
 /**
- * Represents a simple function that takes a parameter of type P and returns a value of type R.
- * @template P The type of the parameter.
- * @template R The type of the return value.
- * @param value The value of type P to be passed to the function.
- * @returns The result of applying the function to the given value.
+ * Makes all properties of a type mutable by removing the readonly modifier.
+ * @template T - The type to make mutable.
  */
-export type SimpleFunction<P, R> = (value: P) => R;
+export type Mutable<T> = {
+  -readonly [P in keyof T]: T[P];
+};
 
 /**
- * Represents a function that can accept any number of arguments and returns a value of type R.
- * @template R - The return type of the function.
+ * Type helper that prettifies the properties of a given type.
+ * @template T - The type to prettify.
  */
-export type AnyFunction<R> = (...args: any[]) => R;
-
-/**
- * Extracts the first parameter type from a function type.
- * @template F - The function type.
- * @returns The parameter type of the function.
- */
-export type Param<F> = F extends (param: infer P, ...args: any[]) => any
-  ? P
-  : never;
-
-/**
- * Extracts the parameter types from a function type.
- * @template F - The function type.
- * @returns An array of parameter types.
- */
-export type ParamArgs<F> = F extends (...args: Array<infer P>) => any
-  ? P
-  : never;
-
-/**
- * Extracts the element type from an array type.
- * @template A - The array type.
- * @returns The element type of the array.
- */
-export type ArrayElement<A> = A extends Array<infer Element> ? Element : never;
+export type Prettify<T> = {
+  [P in keyof T]: T[P];
+};
 
 /**
  * Extracts the key type from a record type.
@@ -81,3 +57,12 @@ export type PromiseOrAwaited<T> = Promise<T> | T;
  * @returns The resolved type of the {@link Promise}.
  */
 export type Awaited<P> = P extends Promise<infer T> ? T : never;
+
+/**
+ * Extracts the instance type from a constructor function type.
+ * @template T - The constructor function type.
+ * @returns The instance type of the constructor function.
+ */
+export type InstanceType<T> = T extends new (...args: any[]) => infer R
+  ? R
+  : never;

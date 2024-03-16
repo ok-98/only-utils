@@ -8,6 +8,7 @@ import {
   RecursiveArray,
   type SetLike,
 } from '../../types/helpers/collection-helpers';
+import { Promisify } from '../../types/helpers/function-helpers';
 import { EMPTY_OBJECT } from '../const-utils';
 import { EMPTY_ARROW_FUNCTION } from '../function-utils';
 import { isDefined } from '../nullish-utils';
@@ -286,3 +287,12 @@ export const hasApproximately = <T>(
   x: number,
   approxRange: number,
 ) => hasBetween(value, [x - approxRange, x + approxRange], 'including');
+
+export const asyncForEach = async <T>(
+  array: T[],
+  callback: Promisify<(item: T, index: number, array: T[]) => void>,
+): Promise<void> => {
+  for (let index = 0; index < array.length; index++) {
+    await callback(array[index], index, array);
+  }
+};
