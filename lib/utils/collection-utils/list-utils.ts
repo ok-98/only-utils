@@ -1,4 +1,9 @@
-import { isEmpty as empty, isEqual, isFinite, isString } from 'lodash-es';
+import {
+  isEmpty as empty,
+  isEqual,
+  isFinite,
+  isString,
+} from '../../lodash-wrapper';
 import {
   type ArrayLike,
   type CollectionLike,

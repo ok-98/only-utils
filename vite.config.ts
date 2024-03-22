@@ -13,9 +13,6 @@ export default defineConfig({
       entry: [resolve(__dirname, 'lib/utils/index.ts')],
       formats: ['es', 'cjs'],
     },
-    commonjsOptions: {
-      esmExternals: ['lodash-es'],
-    },
     rollupOptions: {
       external: ['lodash-es', 'lodash', 'url'],
     },
