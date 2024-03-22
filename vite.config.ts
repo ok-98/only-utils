@@ -5,6 +5,7 @@ import dts from 'vite-plugin-dts';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [dts({ include: ['lib'], exclude: ['**/*.test.ts'] })],
+  resolve: {},
   build: {
     lib: {
       fileName: 'main',
@@ -16,7 +17,7 @@ export default defineConfig({
       esmExternals: ['lodash-es'],
     },
     rollupOptions: {
-      external: ['lodash-es', 'url'],
+      external: ['lodash-es', 'lodash', 'url'],
     },
   },
 });
