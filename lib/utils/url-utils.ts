@@ -1,5 +1,13 @@
-import { URL } from 'url';
-import { TOrUndefined } from '../types';
+import type { URL } from 'url';
+import { CtorParam1, CtorParam2, TOrUndefined } from '../types';
+
+const requireURL = (
+  value: CtorParam1<typeof URL>,
+  base?: CtorParam2<typeof URL>,
+) => {
+  const { URL: urlCtor }: { URL: typeof URL } = require('url');
+  return new urlCtor(value, base);
+};
 
 /**
  * Converts a value to a {@link URL} object.
@@ -8,11 +16,11 @@ import { TOrUndefined } from '../types';
  * @returns The {@link URL} object if the conversion is successful, otherwise undefined.
  */
 export const toUrl = (
-  value: string | { toString: () => string },
-  base?: string | URL,
+  value: CtorParam1<typeof URL>,
+  base?: CtorParam2<typeof URL>,
 ): TOrUndefined<URL> => {
   try {
-    const url = new URL(value, base);
+    const url = requireURL(value, base);
     return url;
   } catch (e) {}
 
