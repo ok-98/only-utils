@@ -1,5 +1,11 @@
 # only-utils
 
+## 0.2.0
+
+### Minor Changes
+
+- e0bd5dd: removed lodash-es peer dependency
+
 ## 0.1.6
 
 ### Patch Changes
