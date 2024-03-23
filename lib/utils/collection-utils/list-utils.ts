@@ -3,7 +3,7 @@ import {
   isEqual,
   isFinite,
   isString,
-} from '../../lodash-wrapper';
+} from '../../generic-utils/index';
 import {
   type ArrayLike,
   type CollectionLike,

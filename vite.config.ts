@@ -4,7 +4,12 @@ import dts from 'vite-plugin-dts';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [dts({ include: ['lib'], exclude: ['**/*.test.ts'] })],
+  plugins: [
+    dts({
+      include: ['lib'],
+      exclude: ['**/*.test.ts', 'generic-utils/**/*.ts'],
+    }),
+  ],
   resolve: {},
   build: {
     lib: {
@@ -14,7 +19,7 @@ export default defineConfig({
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
-      external: ['lodash-es', 'lodash', 'url'],
+      external: ['url'],
     },
   },
 });

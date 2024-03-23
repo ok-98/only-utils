@@ -1,4 +1,4 @@
-import { isEqual } from '../lodash-wrapper';
+import { isEqual } from '../generic-utils';
 import { AnyFunction } from '../main.ts';
 import { ArrayWithAtLeast2 } from '../types/helpers/collection-helpers.ts';
 import {
