@@ -1,8 +1,5 @@
 const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended');
 
-/**
- * @type {}
- */
 module.exports = [
   {
     root: true,
