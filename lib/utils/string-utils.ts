@@ -1,14 +1,6 @@
 import { isDefined } from '.';
 import { Optional, TOrUndefined } from '../types';
-
-type Braces =
-  | ['{', '}']
-  | ['[', ']']
-  | ['(', ')']
-  | ['<', '>']
-  | [string, string];
-
-type Quotation = "'" | '"' | '`' | '´';
+import { Braces, Quotation } from '../types/helpers/string-helpers';
 
 /**
  * Wraps the given value with braces.

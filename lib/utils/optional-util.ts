@@ -9,7 +9,7 @@ import {
  * Represents an optional value that may or may not be present.
  * @template T - The type of the optional value.
  */
-type OptionalValue<T> = {
+export type OptionalValue<T> = {
   /**
    * Retrieves the value if present, otherwise returns undefined.
    * @returns The optional value or undefined.

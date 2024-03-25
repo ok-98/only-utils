@@ -52,6 +52,7 @@ export type {
   TOrUndefined,
 } from './helpers/nullish-helpers';
 export type { Primitive, PrimitiveNullish } from './helpers/primitive-helpers';
+export type { Braces, Quotation } from './helpers/string-helpers';
 export type {
   Awaited,
   InstanceType,

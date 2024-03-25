@@ -41,3 +41,19 @@ export {
 } from './string-utils';
 
 export { optional } from './optional-util';
+export type { OptionalValue } from './optional-util';
+
+export {
+  alwaysFalse,
+  alwaysTrue,
+  isBoolean,
+  isFalse,
+  isFalsey,
+  isFalseyValue,
+  isFalsyArray,
+  isTrue,
+  isTruthy,
+  isTruthyArray,
+  isTruthyValue,
+  negate,
+} from './bool-utils';

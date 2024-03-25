@@ -30,10 +30,4 @@ pnpm add only-utils
 bun install only-utils
 ```
 
-## Utils
-
-TODO: list all utils
-
-## Type-Utils
-
-TODO: list all types
+<!-- DOCS -->
