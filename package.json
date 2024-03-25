@@ -45,7 +45,7 @@
     "treecheck": "pnpm build && agadoo dist/main.js",
     "cs": "pnpm changeset",
     "cs:version": "pnpm cs version",
-    "release": "pnpm build && pnpm cs publish",
+    "release": "pnpm build && pnpm gen:docs && pnpm cs publish",
     "gen:docs": "node ./tooling/gen-docs.cjs",
     "prepare": "husky"
   },

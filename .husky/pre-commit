@@ -5,3 +5,4 @@
 pnpx pretty-quick --staged
 pnpm gen:docs
 git add ./README.md
+git add ./modules.md

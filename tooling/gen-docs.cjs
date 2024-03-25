@@ -1,37 +1,34 @@
-const { readFile, writeFile } = require('fs/promises');
+const { readFile, writeFile, rm, copyFile } = require('fs/promises');
 const path = require('path');
 const TypeDoc = require('typedoc');
+const MY_FILES = ['README.md', 'modules.md'];
 
 async function main() {
-  const rootReadme = await readFile(
-    path.join(__dirname, '../README.base.md'),
-    'utf-8',
-  );
+  //    await rm(path.join(__dirname, '../README.md'), { force: true });
 
   const app = await TypeDoc.Application.bootstrapWithPlugins({
     entryPoints: ['lib/main.ts'],
     plugin: ['typedoc-plugin-markdown'],
-    readme: 'none',
+    readme: path.join(__dirname, '../README.base.md'),
     githubPages: false,
     hideGenerator: true,
     jsDocCompatibility: true,
-    titleLink: undefined,
+    //titleLink: undefined,
     exclude: ['**/node_modules/**/*.*'],
   });
   const project = await app.convert();
   if (project) {
     await app.generateDocs(project, path.join(__dirname, './temp'));
-    const generateDocs = await readFile(
-      path.join(__dirname, './temp', 'README.md'),
-      'utf-8',
+
+    await Promise.all(
+      MY_FILES.map(
+        async (file) =>
+          await copyFile(
+            path.join(__dirname, './temp', file),
+            path.join(__dirname, '../', file),
+          ),
+      ),
     );
-    const trimStartingWith = '## Table of contents';
-    const startIndex = generateDocs.indexOf(trimStartingWith);
-    const readme = rootReadme.replace(
-      '<!-- DOCS -->',
-      generateDocs.slice(startIndex).trim(),
-    );
-    await writeFile(path.join(__dirname, '../README.md'), readme);
   }
 }
 

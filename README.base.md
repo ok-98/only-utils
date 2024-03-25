@@ -31,3 +31,9 @@ bun install only-utils
 ```
 
 <!-- DOCS -->
+
+## [Types](modules.md#type-aliases-1)
+
+## [Utils](modules.md#functions-1)
+
+## [Constants](modules.md#variables-1)
