@@ -1,5 +1,11 @@
 # only-utils
 
+## 0.3.2
+
+### Patch Changes
+
+- added css types
+
 ## 0.3.1
 
 ### Patch Changes

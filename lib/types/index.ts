@@ -1,4 +1,22 @@
-export type { CssVar, CssVarName } from './helpers/browser-helpers';
+export type {
+  CssBasicValues,
+  CssCalcOperator,
+  CssColor,
+  CssColorHex,
+  CssColorHslHwb,
+  CssColorLab,
+  CssColorRgb,
+  CssFourLengths,
+  CssGenericCalcOperation,
+  CssLength,
+  CssLengthUnits,
+  CssNamedColors,
+  CssSimpleCalcOperation,
+  CssSystemColors,
+  CssTwoLengths,
+  CssVar,
+  CssVarName,
+} from './helpers/browser-helpers';
 export type {
   ArrayElement,
   ArrayLike,
@@ -52,7 +70,6 @@ export type {
   TOrUndefined,
 } from './helpers/nullish-helpers';
 export type { Primitive, PrimitiveNullish } from './helpers/primitive-helpers';
-export type { Braces, Quotation } from './helpers/string-helpers';
 export type {
   Awaited,
   InstanceType,
@@ -64,3 +81,11 @@ export type {
   RecordKeyValue,
   RecordValue,
 } from './helpers/type-helpers';
+
+export type {
+  Braces,
+  HexCharacter,
+  Quotation,
+  SingleNumber,
+  SingleNumberString,
+} from './helpers/string-helpers';
