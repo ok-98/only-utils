@@ -1,5 +1,6 @@
 export {
   asArray,
+  asyncForEach,
   emptyListToUndefined,
   filterNullishArray,
   filterNullishMap,

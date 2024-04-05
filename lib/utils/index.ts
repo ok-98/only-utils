@@ -57,3 +57,14 @@ export {
   isTruthyValue,
   negate,
 } from './bool-utils';
+
+export {
+  delayedFunction,
+  filterAsync,
+  isAwaited,
+  isPromise,
+  mapAsync,
+  parallel,
+  retry,
+  sleep,
+} from './async-utils';

@@ -32,6 +32,7 @@ export type {
 } from './helpers/collection-helpers';
 export type {
   AnyFunction,
+  AsyncFunctionOrNot,
   CtorParam,
   CtorParam1,
   CtorParam10,
@@ -45,6 +46,7 @@ export type {
   CtorParam9,
   CtorParamArgs,
   CtorParameters,
+  EmptyFunction,
   Param,
   Param1,
   Param10,
