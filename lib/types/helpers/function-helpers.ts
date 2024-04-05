@@ -1,3 +1,5 @@
+import { PromiseOrAwaited } from '..';
+
 /**
  * Represents a simple function that takes a parameter of type P and returns a value of type R.
  * @template P The type of the parameter.
@@ -418,3 +420,7 @@ export type CtorParam10<C extends new (...args: any) => any> = C extends new (
 export type Promisify<F extends (...args: any[]) => any> = (
   ...args: Parameters<F>
 ) => Promise<ReturnType<F>>;
+
+export type AsyncFunctionOrNot<
+  F extends (...args: any[]) => PromiseOrAwaited<any>,
+> = (...args: Parameters<F>) => ReturnType<F> | Awaited<ReturnType<F>>;

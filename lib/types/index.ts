@@ -45,7 +45,6 @@ export type {
   CtorParam9,
   CtorParamArgs,
   CtorParameters,
-  EmptyFunction,
   Param,
   Param1,
   Param10,
