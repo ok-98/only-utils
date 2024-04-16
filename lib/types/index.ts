@@ -73,6 +73,7 @@ export type {
 export type { Primitive, PrimitiveNullish } from './helpers/primitive-helpers';
 export type {
   Awaited,
+  DeepReadonly,
   InstanceType,
   Mutable,
   Nested,

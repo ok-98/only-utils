@@ -68,3 +68,5 @@ export {
   retry,
   sleep,
 } from './async-utils';
+
+export { toDate } from './date-utils';
