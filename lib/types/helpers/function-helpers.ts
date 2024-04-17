@@ -20,7 +20,7 @@ export type EmptyFunction<R = void> = () => R;
  * Represents any function that takes any number of arguments and returns a value of type R.
  * @template R The return type of the function.
  */
-export type AnyFunction<R = void> = (...args: any[]) => R;
+export type AnyFunction<R = void, Args = any> = (...args: Args[]) => R;
 
 /**
  * Extracts the first parameter type from a function type.

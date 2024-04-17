@@ -13,7 +13,10 @@ import {
   RecursiveArray,
   type SetLike,
 } from '../../types/helpers/collection-helpers';
-import { Promisify } from '../../types/helpers/function-helpers';
+import {
+  Promisify,
+  SimpleFunction,
+} from '../../types/helpers/function-helpers';
 import { EMPTY_OBJECT } from '../const-utils';
 import { EMPTY_ARROW_FUNCTION } from '../function-utils';
 import { isDefined } from '../nullish-utils';
@@ -300,4 +303,16 @@ export const asyncForEach = async <T>(
   for (let index = 0; index < array.length; index++) {
     await callback(array[index], index, array);
   }
+};
+
+export const splitArray = <T>(
+  array: ArrayLike<T>,
+  condition: SimpleFunction<T, boolean>,
+) => {
+  const trueArray: Array<T> = [];
+  const falseArray: Array<T> = [];
+  const addToArray = (value: T) =>
+    (condition(value) ? trueArray : falseArray).push(value);
+  _asArray(array, true).forEach(addToArray);
+  return { true: trueArray, false: falseArray };
 };
