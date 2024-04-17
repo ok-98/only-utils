@@ -65,7 +65,7 @@ export const isTruthyValue = (value: unknown): boolean => !!value;
  * @returns `true` if the value is a truthy array, `false` otherwise.
  */
 export const isTruthyArray = (value: unknown[]): boolean =>
-  Array.isArray(value) && value.length > 0;
+  Array.isArray(value) && value.filter(isTruthy).length > 0;
 
 /**
  * Checks if the given value is a falsy array.
@@ -74,7 +74,7 @@ export const isTruthyArray = (value: unknown[]): boolean =>
  * @returns `true` if the value is a falsy array, `false` otherwise.
  */
 export const isFalsyArray = (value: unknown[]): boolean =>
-  Array.isArray(value) && value.length === 0;
+  Array.isArray(value) && value.filter(isTruthy).length === 0;
 
 /**
  * Checks if a value is truthy.

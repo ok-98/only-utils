@@ -67,6 +67,10 @@ export type InstanceType<T> = T extends new (...args: any[]) => infer R
   ? R
   : never;
 
+/**
+ * Represents a type that makes all properties of an object and its nested properties readonly.
+ * @template T - The type of the object to make readonly.
+ */
 export type DeepReadonly<T> = Readonly<{
   [K in keyof T]: T[K] extends number | string | symbol
     ? Readonly<T[K]>

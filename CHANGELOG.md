@@ -1,5 +1,15 @@
 # only-utils
 
+## 0.3.5
+
+### Patch Changes
+
+- added "flatMap" to optional
+- f0d5f64: added date-utils
+- bool bugfixes
+- 5d7ba68: added boolean function utils
+- f0d5f64: added DeepReadonly
+
 ## 0.3.2
 
 ### Patch Changes

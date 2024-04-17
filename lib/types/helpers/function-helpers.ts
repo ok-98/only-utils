@@ -421,6 +421,12 @@ export type Promisify<F extends (...args: any[]) => any> = (
   ...args: Parameters<F>
 ) => Promise<ReturnType<F>>;
 
+/**
+ * Represents a function that can be either asynchronous or synchronous.
+ * @template F - The type of the function.
+ * @param args - The arguments of the function.
+ * @returns The return type of the function, which can be either a direct value or a promise.
+ */
 export type AsyncFunctionOrNot<
   F extends (...args: any[]) => PromiseOrAwaited<any>,
 > = (...args: Parameters<F>) => ReturnType<F> | Awaited<ReturnType<F>>;

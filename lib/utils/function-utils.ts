@@ -33,19 +33,39 @@ export const EAAF = EMPTY_ARROW_FUNCTION;
  */
 export const identity = <T>(value: T) => value;
 
+/**
+ * Returns a new function that negates the result of the provided function.
+ *
+ * @template T - The type of the provided function.
+ * @param {T} func - The function to negate.
+ * @returns {T} - A new function that negates the result of the provided function.
+ */
 export const not = <T extends (...args: ParamArgs<T>[]) => boolean>(
   func: T,
 ): T => ((...args: ParamArgs<T>[]) => !func(...args)) as T;
 
+/**
+ * A utility function that returns the input function itself.
+ *
+ * @template T - The type of the input function.
+ * @template R - The return type of the input function.
+ * @param {T} func - The input function.
+ * @returns {T} - The input function itself.
+ */
 export const identityFunc = <T extends (...args: ParamArgs<T>[]) => R, R>(
   func: T,
 ): T => ((...args: ParamArgs<T>[]) => func(...args)) as T;
 
-export const and = <
-  T extends (...args: ParamArgs<T>[]) => boolean = () => boolean,
-  V = unknown,
->(
-  ...funcs: ArrayWithAtLeast2<T | V>
+/**
+ * Combines multiple functions or boolean values into a single function that returns true
+ * if all functions return true or all boolean values are true.
+ *
+ * @template T - The type of the functions being combined.
+ * @param {...ArrayWithAtLeast2<T | unknown>} funcs - The functions or boolean values to combine.
+ * @returns {T} - A function that returns true if all functions return true or all boolean values are true.
+ */
+export const and = <T extends (...args: (ParamArgs<T> | unknown)[]) => boolean>(
+  ...funcs: ArrayWithAtLeast2<T | unknown>
 ): T =>
   ((...args: ParamArgs<T>[]) => {
     for (const funcOrBool of funcs) {
@@ -62,29 +82,40 @@ export const and = <
     return true;
   }) as T;
 
-export const or = <
-  T extends (...args: (ParamArgs<T> | unknown)[]) => boolean,
-  V = unknown,
->(
-  ...funcs: ArrayWithAtLeast2<T | V>
+/**
+ * Combines multiple functions or boolean values into a single function that returns true if any of the functions return true or any of the boolean values are true.
+ *
+ * @template T - The type of the combined function.
+ * @param {...ArrayWithAtLeast2<T | unknown>} funcs - The functions or boolean values to be combined.
+ * @returns {T} - The combined function.
+ */
+export const or = <T extends (...args: (ParamArgs<T> | unknown)[]) => boolean>(
+  ...funcs: ArrayWithAtLeast2<T | unknown>
 ): T =>
   ((...args: ParamArgs<T>[]) => {
-    let value = true;
     for (const funcOrBool of funcs) {
       if (typeof funcOrBool === 'function') {
-        value &&= (funcOrBool as T)(...args);
+        if ((funcOrBool as T)(...args)) {
+          return true;
+        }
       } else {
-        value &&= !!funcOrBool;
+        if (!!funcOrBool) {
+          return true;
+        }
       }
     }
-    return true;
+    return false;
   }) as T;
 
-export const xor = <
-  T extends (...args: (ParamArgs<T> | unknown)[]) => boolean,
-  V = unknown,
->(
-  ...funcs: ArrayWithAtLeast2<T | V>
-): T =>
-  ((...args: ParamArgs<T>[]) =>
-    !and(...funcs)(...args) && or(...funcs)(...args)) as T;
+/**
+ * Performs an exclusive OR (XOR) operation on the provided functions.
+ * Returns a new function that returns true if an odd number of the provided functions return true,
+ * and false otherwise.
+ *
+ * @template T - The type of the functions.
+ * @param {...ArrayWithAtLeast2<T | unknown>} funcs - The functions to perform the XOR operation on.
+ * @returns {T} - A new function that performs the XOR operation.
+ */
+export const xor = <T extends (...args: (ParamArgs<T> | unknown)[]) => boolean>(
+  ...funcs: ArrayWithAtLeast2<T | unknown>
+): T => and(not(and(...funcs)), or(...funcs)) as T;

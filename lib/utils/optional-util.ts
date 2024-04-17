@@ -69,12 +69,20 @@ export type OptionalValue<T> = {
   filter: (predicate: SimpleFunction<T, boolean>) => OptionalValue<T>;
 
   /**
-   * Maps the optional value to a new value using the specified mapper function.
+   * Maps the optional value to a new value using the specified mapper function. It is usefull for nested optionals.
    * @template R - The type of the new value.
    * @param mapper - The mapper function to transform the optional value.
    * @returns A new optional value that contains the mapped value if present, otherwise an empty optional value.
    */
   map: <R>(mapper: SimpleFunction<T, R>) => OptionalValue<R>;
+
+  /**
+   * Maps the optional value to a new optional using the specified mapper function.
+   * @template R - The type of the new value.
+   * @param mapper - The mapper function to transform the optional value.
+   * @returns A new optional value that contains the mapped value if present, otherwise an empty optional value.
+   */
+  flatMap: <R>(mapper: SimpleFunction<T, OptionalValue<R>>) => OptionalValue<R>;
 };
 
 /**
@@ -116,6 +124,11 @@ function optionalFunc<T>(value: Optional<T>): OptionalValue<T> {
       return defined
         ? optionalFunc(mapper(value))
         : (emptyOptional as OptionalValue<R>);
+    },
+    flatMap: function <R>(
+      mapper: SimpleFunction<T, OptionalValue<R>>,
+    ): OptionalValue<R> {
+      return defined ? mapper(value) : (emptyOptional as OptionalValue<R>);
     },
     filter: function (predicate: SimpleFunction<T, boolean>): OptionalValue<T> {
       return defined && predicate(value)
