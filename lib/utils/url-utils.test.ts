@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { toUrl } from './url-utils';
+import { toUrl } from './url-utils.ts';
 
 describe('toUrl', () => {
   it('should return a URL object for a valid URL string', () => {

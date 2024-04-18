@@ -1,4 +1,4 @@
-import { PromiseOrAwaited } from '..';
+import { PromiseOrAwaited } from './type-helpers.ts';
 
 /**
  * Represents a simple function that takes a parameter of type P and returns a value of type R.

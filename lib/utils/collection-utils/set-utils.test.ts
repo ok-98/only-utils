@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { filterNullishSet } from './list-utils';
+import { filterNullishSet } from './list-utils.ts';
 
 describe('filterNullishSet', () => {
   it('should filter out null and undefined values from a set', () => {

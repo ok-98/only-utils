@@ -1,12 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { EMPTY_OBJECT } from './const-utils';
+import { EMPTY_OBJECT } from './const-utils.ts';
 import {
   areEqual,
   asType,
   hasKey,
   isEmptyObject,
   isType,
-} from './object-utils';
+} from './object-utils.ts';
 
 describe('hasKey', () => {
   it('should return true if the object has the key', () => {

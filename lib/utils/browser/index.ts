@@ -3,4 +3,4 @@ export {
   getCssVarValue,
   getCssVariableName,
   toCssVar,
-} from './css-utils';
+} from './css-utils.ts';

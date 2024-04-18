@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { filterNullishMap } from './list-utils';
+import { filterNullishMap } from './list-utils.ts';
 
 describe('filterNullishMap', () => {
   it('should filter out null and undefined values from a map', () => {

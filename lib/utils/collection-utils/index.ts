@@ -16,4 +16,4 @@ export {
   isSet,
   mapRecursiveArray,
   nonEmpty,
-} from './list-utils';
+} from './list-utils.ts';

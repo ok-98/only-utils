@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { isAwaited, isPromise } from './async-utils';
+import { isAwaited, isPromise } from './async-utils.ts';
 
 describe('isPromise', () => {
   it('should return true if the value is a Promise', () => {

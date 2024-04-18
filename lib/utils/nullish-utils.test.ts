@@ -7,7 +7,7 @@ import {
   isDefined,
   isNotDefined,
   transformIfDefined,
-} from './nullish-utils';
+} from './nullish-utils.ts';
 
 describe('isDefined', () => {
   it('should return true for non-null and non-undefined values', () => {

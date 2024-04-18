@@ -1,4 +1,4 @@
-import { type Optional } from './nullish-helpers';
+import { type Optional } from './nullish-helpers.ts';
 
 /**
  * Represents a primitive type in TypeScript.

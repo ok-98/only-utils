@@ -1,4 +1,4 @@
-import { hasKey, isDefined, isNotDefined } from '../utils';
+import { hasKey, isDefined, isNotDefined } from '../utils/index.ts';
 
 export const isEmpty = (value: unknown): boolean => {
   if (isNotDefined(value)) {

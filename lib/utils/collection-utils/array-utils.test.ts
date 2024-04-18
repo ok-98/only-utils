@@ -1,5 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { asArray, filterNullishArray, mapRecursiveArray } from './list-utils';
+import {
+  asArray,
+  filterNullishArray,
+  mapRecursiveArray,
+} from './list-utils.ts';
 
 describe('asArray', () => {
   it('should convert a set to an array', () => {

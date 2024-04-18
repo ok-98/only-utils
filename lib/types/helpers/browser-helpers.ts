@@ -1,4 +1,4 @@
-import { HexCharacter } from './string-helpers';
+import { HexCharacter } from './string-helpers.ts';
 
 /**
  * Represents the name of a CSS variable.

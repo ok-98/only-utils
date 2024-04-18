@@ -4,7 +4,7 @@ import {
   emptyStringToUndefined,
   quote,
   undefinedToEmptyString,
-} from './string-utils';
+} from './string-utils.ts';
 
 describe('braceYourself', () => {
   it('should enclose a string with default braces', () => {

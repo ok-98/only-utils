@@ -3,24 +3,23 @@ import {
   isEqual,
   isFinite,
   isString,
-} from '../../generic-utils/index';
+} from '../../generic-utils/index.ts';
+
 import {
-  type ArrayLike,
-  type CollectionLike,
-  type Optional,
-} from '../../types';
-import {
+  ArrayLike,
+  CollectionLike,
   RecursiveArray,
   type SetLike,
-} from '../../types/helpers/collection-helpers';
+} from '../../types/helpers/collection-helpers.ts';
 import {
   Promisify,
   SimpleFunction,
-} from '../../types/helpers/function-helpers';
-import { EMPTY_OBJECT } from '../const-utils';
-import { EMPTY_ARROW_FUNCTION } from '../function-utils';
-import { isDefined } from '../nullish-utils';
-import { isPositive } from '../number-utils';
+} from '../../types/helpers/function-helpers.ts';
+import { Optional } from '../../types/helpers/nullish-helpers.ts';
+import { EMPTY_OBJECT } from '../const-utils.ts';
+import { EMPTY_ARROW_FUNCTION } from '../function-utils.ts';
+import { isDefined } from '../nullish-utils.ts';
+import { isPositive } from '../number-utils.ts';
 
 /**
  * Checks if a value is an array.

@@ -1,5 +1,17 @@
 # only-utils
 
+## 0.4.0
+
+### Minor Changes
+
+- changed to nodenext
+
+## 0.3.6
+
+### Patch Changes
+
+- extracted boolean chaining functions to boolchain: https://github.com/kacper-olszanski/boolchain.js
+
 ## 0.3.5
 
 ### Patch Changes

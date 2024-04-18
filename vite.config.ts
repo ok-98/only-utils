@@ -10,16 +10,17 @@ export default defineConfig({
       exclude: ['**/*.test.ts', 'generic-utils/**/*.ts'],
     }),
   ],
-  resolve: {},
   build: {
     lib: {
       fileName: 'main',
       name: 'only-utils',
-      entry: [resolve(__dirname, 'lib/utils/index.ts')],
-      formats: ['es', 'cjs'],
+      entry: [resolve(__dirname, 'lib/main.ts')],
     },
     rollupOptions: {
-      external: ['url'],
+      external: ['url', 'fs', 'fs/promises'],
+      output: {
+        exports: 'named',
+      },
     },
   },
 });

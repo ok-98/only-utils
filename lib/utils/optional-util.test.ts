@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { optional } from './optional-util';
+import { optional } from './optional-util.ts';
 
 describe('optional', () => {
   describe('get', () => {

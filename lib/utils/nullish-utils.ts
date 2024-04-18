@@ -1,10 +1,11 @@
-import type {
+import { not } from 'boolchain';
+import { SimpleFunction } from '../types/helpers/function-helpers.ts';
+import {
   Nullish,
   Optional,
-  SimpleFunction,
   TOrNull,
   TOrUndefined,
-} from '../types';
+} from '../types/helpers/nullish-helpers.ts';
 
 /**
  * Checks if a value is defined (not null or undefined).
@@ -32,7 +33,7 @@ export const areDefined = <T>(
  * @returns A boolean indicating whether the value is not defined.
  */
 export const isNotDefined = <T>(value: Optional<T>): value is Nullish =>
-  !isDefined(value);
+  not(isDefined)(value);
 
 /**
  * Checks if all values in an array are not defined.

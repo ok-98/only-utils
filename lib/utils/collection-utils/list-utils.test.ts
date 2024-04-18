@@ -8,7 +8,7 @@ import {
   hasMoreThan,
   isEmpty,
   nonEmpty,
-} from './list-utils';
+} from './list-utils.ts';
 
 describe('isEmpty', () => {
   it('should return true for an empty object', () => {

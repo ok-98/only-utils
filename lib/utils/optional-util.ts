@@ -1,9 +1,9 @@
-import { isDefined } from '.';
-import { Optional, TOrUndefined } from '../types';
 import {
   EmptyFunction,
   SimpleFunction,
-} from '../types/helpers/function-helpers';
+} from '../types/helpers/function-helpers.js';
+import { Optional, TOrUndefined } from '../types/helpers/nullish-helpers.js';
+import { isDefined } from './nullish-utils.js';
 
 /**
  * Represents an optional value that may or may not be present.

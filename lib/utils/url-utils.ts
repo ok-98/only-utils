@@ -1,5 +1,6 @@
 import type { URL } from 'url';
-import { CtorParam1, CtorParam2, TOrUndefined } from '../types';
+import { CtorParam1, CtorParam2 } from '../types/helpers/function-helpers.js';
+import { TOrUndefined } from '../types/helpers/nullish-helpers.ts';
 
 const requireURL = (
   value: CtorParam1<typeof URL>,

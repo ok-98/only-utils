@@ -1,13 +1,9 @@
-import { isEqual } from '../generic-utils';
-import { AnyFunction } from '../main.ts';
-import { ArrayWithAtLeast2 } from '../types/helpers/collection-helpers.ts';
-import {
-  Primitive,
-  PrimitiveNullish,
-} from '../types/helpers/primitive-helpers';
-import { filterNullishArray } from './collection-utils/list-utils';
+import { isEqual } from '../generic-utils/generic-utils.js';
+import { ArrayWithAtLeast2 } from '../types/helpers/collection-helpers.js';
+import { AnyFunction, Primitive, PrimitiveNullish } from '../types/index.js';
+import { filterNullishArray } from './collection-utils/list-utils.ts';
 import { EMPTY_OBJECT } from './const-utils.ts';
-import { isNotDefined } from './nullish-utils.ts';
+import { isNotDefined } from './nullish-utils.js';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 /**

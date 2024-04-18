@@ -1,5 +1,5 @@
-import { CssVar, CssVarName } from '../../types/helpers/browser-helpers';
-import { areNotDefined, isNotDefined } from '../nullish-utils';
+import { CssVar, CssVarName } from '../../types/helpers/browser-helpers.ts';
+import { areNotDefined, isNotDefined } from '../nullish-utils.js';
 
 const isCssVarName = (value: string): value is CssVarName =>
   value.startsWith('--');

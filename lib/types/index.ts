@@ -16,7 +16,7 @@ export type {
   CssTwoLengths,
   CssVar,
   CssVarName,
-} from './helpers/browser-helpers';
+} from './helpers/browser-helpers.ts';
 export type {
   ArrayElement,
   ArrayLike,
@@ -29,7 +29,7 @@ export type {
   NonEmptyArray,
   RecursiveArray,
   SetLike,
-} from './helpers/collection-helpers';
+} from './helpers/collection-helpers.ts';
 export type {
   AnyFunction,
   AsyncFunctionOrNot,
@@ -61,7 +61,7 @@ export type {
   ParamArgs,
   Promisify,
   SimpleFunction,
-} from './helpers/function-helpers';
+} from './helpers/function-helpers.ts';
 export type {
   Nullish,
   Optional,
@@ -69,8 +69,11 @@ export type {
   RequiredKeys,
   TOrNull,
   TOrUndefined,
-} from './helpers/nullish-helpers';
-export type { Primitive, PrimitiveNullish } from './helpers/primitive-helpers';
+} from './helpers/nullish-helpers.ts';
+export type {
+  Primitive,
+  PrimitiveNullish,
+} from './helpers/primitive-helpers.ts';
 export type {
   Awaited,
   DeepReadonly,
@@ -82,7 +85,7 @@ export type {
   RecordKey,
   RecordKeyValue,
   RecordValue,
-} from './helpers/type-helpers';
+} from './helpers/type-helpers.ts';
 
 export type {
   Braces,
@@ -90,4 +93,4 @@ export type {
   Quotation,
   SingleNumber,
   SingleNumberString,
-} from './helpers/string-helpers';
+} from './helpers/string-helpers.ts';

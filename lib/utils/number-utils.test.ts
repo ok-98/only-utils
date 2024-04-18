@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { isNegative, isPositive } from './number-utils';
+import { isNegative, isPositive } from './number-utils.ts';
 
 describe('isPositive', () => {
   it('should return true for a positive number', () => {

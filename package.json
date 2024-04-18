@@ -1,6 +1,6 @@
 {
   "name": "only-utils",
-  "version": "0.3.5",
+  "version": "0.4.1",
   "license": "MIT",
   "sideEffects": false,
   "description": "Only Nice Lean Yare - UTILS ...and some types",
@@ -9,9 +9,14 @@
     "url": "https://github.com/kacper-olszanski/only-utils.git"
   },
   "type": "module",
-  "main": "dist/main.cjs",
+  "main": "dist/main.umd.cjs",
   "module": "dist/main.js",
   "types": "dist/main.d.ts",
+  "exports": {
+    "types": "./main.d.ts",
+    "import": "./dist/main.js",
+    "require": "./dist/main.umd.cjs"
+  },
   "author": {
     "name": "Kacper Olszanski",
     "email": "dev@rvtr.media",
@@ -71,5 +76,8 @@
     "vite": "^5.2.9",
     "vite-plugin-dts": "^3.8.3",
     "vitest": "^1.5.0"
+  },
+  "dependencies": {
+    "boolchain": "^0.2.1"
   }
 }

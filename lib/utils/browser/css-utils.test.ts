@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { CssVar } from '../../types';
-import { getCssVariableName, toCssVar } from './css-utils';
+import { CssVar } from '../../types/helpers/browser-helpers.ts';
+import { getCssVariableName, toCssVar } from './css-utils.ts';
 
 describe('css-utils', () => {
   describe('getCssVariableName', () => {

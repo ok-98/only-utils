@@ -1,6 +1,6 @@
-import { isDefined } from '.';
-import { Optional, TOrUndefined } from '../types';
-import { Braces, Quotation } from '../types/helpers/string-helpers';
+import { Optional, TOrUndefined } from '../types/helpers/nullish-helpers.js';
+import { Braces, Quotation } from '../types/helpers/string-helpers.js';
+import { isDefined } from './nullish-utils.js';
 
 /**
  * Wraps the given value with braces.

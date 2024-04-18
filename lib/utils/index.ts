@@ -1,4 +1,4 @@
-export { isNegative, isPositive } from './number-utils';
+export { isNegative, isPositive } from './number-utils.js';
 export {
   areEqual,
   asType,
@@ -7,7 +7,7 @@ export {
   isPrimitive,
   isPrimitiveOrNull,
   isType,
-} from './object-utils';
+} from './object-utils.js';
 
 export {
   areDefined,
@@ -18,34 +18,32 @@ export {
   isDefined,
   isNotDefined,
   transformIfDefined,
-} from './nullish-utils';
+} from './nullish-utils.js';
 
-export { toUrl } from './url-utils';
+export { toUrl } from './url-utils.js';
 
-export * from './browser';
-export * from './collection-utils';
+export * from './browser/index.js';
+export * from './collection-utils/index.js';
 
-export { EMPTY_ARRAY, EMPTY_OBJECT } from './const-utils';
+export * from 'boolchain';
+
+export { EMPTY_ARRAY, EMPTY_OBJECT } from './const-utils.js';
 
 export {
   EMPTY_ARROW_FUNCTION,
   EMPTY_ASYNC_ARROW_FUNCTION,
-  and,
   identity,
-  not,
-  or,
-  xor,
-} from './function-utils';
+} from './function-utils.js';
 
 export {
   braceYourself,
   emptyStringToUndefined,
   quote,
   undefinedToEmptyString,
-} from './string-utils';
+} from './string-utils.js';
 
-export { optional } from './optional-util';
-export type { OptionalValue } from './optional-util';
+export { optional } from './optional-util.js';
+export type { OptionalValue } from './optional-util.js';
 
 export {
   alwaysFalse,
@@ -60,7 +58,7 @@ export {
   isTruthyArray,
   isTruthyValue,
   negate,
-} from './bool-utils';
+} from './bool-utils.js';
 
 export {
   delayedFunction,
@@ -71,6 +69,7 @@ export {
   parallel,
   retry,
   sleep,
-} from './async-utils';
+  sleep as wait,
+} from './async-utils.js';
 
-export { toDate } from './date-utils';
+export { toDate } from './date-utils.js';

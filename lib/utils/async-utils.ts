@@ -1,5 +1,8 @@
-import { AnyFunction, PromiseOrAwaited } from '../types';
-import { AsyncFunctionOrNot } from '../types/helpers/function-helpers';
+import {
+  AnyFunction,
+  AsyncFunctionOrNot,
+} from '../types/helpers/function-helpers.ts';
+import { PromiseOrAwaited } from '../types/helpers/type-helpers.ts';
 
 /**
  * Checks if a value is a Promise.

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { isTruthy } from './bool-utils';
+import { isTruthy } from './bool-utils.ts';
 
 describe('isTruthy', () => {
   it('should return true for truthy values', () => {

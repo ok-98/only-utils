@@ -5,7 +5,7 @@ import {
   isFinite,
   isNumber,
   isString,
-} from './generic-utils';
+} from './generic-utils.ts';
 
 describe('isString', () => {
   it('should return true for a string value', () => {

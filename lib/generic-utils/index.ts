@@ -1,1 +1,1 @@
-export * from './generic-utils';
+export * from './generic-utils.js';
