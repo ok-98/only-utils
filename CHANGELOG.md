@@ -1,5 +1,11 @@
 # only-utils
 
+## 0.4.2
+
+### Patch Changes
+
+- package json type fix
+
 ## 0.4.0
 
 ### Minor Changes

@@ -1,6 +1,6 @@
 {
   "name": "only-utils",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "license": "MIT",
   "sideEffects": false,
   "description": "Only Nice Lean Yare - UTILS ...and some types",
@@ -13,7 +13,7 @@
   "module": "dist/main.js",
   "types": "dist/main.d.ts",
   "exports": {
-    "types": "./main.d.ts",
+    "types": "./dist/main.d.ts",
     "import": "./dist/main.js",
     "require": "./dist/main.umd.cjs"
   },
@@ -78,6 +78,6 @@
     "vitest": "^1.5.0"
   },
   "dependencies": {
-    "boolchain": "^0.2.1"
+    "boolchain": "^0.2.3"
   }
 }
