@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       boolchain:
-        specifier: ^0.2.1
-        version: 0.2.1
+        specifier: latest
+        version: 0.2.4
     devDependencies:
       '@changesets/cli':
         specifier: ^2.27.1
@@ -775,8 +775,8 @@ packages:
     resolution: {integrity: sha512-pbnl5XzGBdrFU/wT4jqmJVPn2B6UHPBOhzMQkY/SPUPB6QtUXtmBHBIwCbXJol93mOpGMnQyP/+BB19q04xj7g==}
     engines: {node: '>=4'}
 
-  boolchain@0.2.1:
-    resolution: {integrity: sha512-VSAuRfc03cOQL0zi1oW2wlosHL32b/7mqrd3la8H11TFFw2tMpe3rgSksMqHsLQrWCkfbG5u4oGK2cp4BGOQ5Q==}
+  boolchain@0.2.4:
+    resolution: {integrity: sha512-ax55sfV2WyFqCJadQfrXbv/UqSaolsX/JWIRrt5q/j4hWQkTxrpLQrxEolWan6PSrC+aYdG7AmmrNaoAHN+AVg==}
     engines: {node: '>=18'}
 
   brace-expansion@1.1.11:
@@ -3265,7 +3265,7 @@ snapshots:
     dependencies:
       is-windows: 1.0.2
 
-  boolchain@0.2.1: {}
+  boolchain@0.2.4: {}
 
   brace-expansion@1.1.11:
     dependencies:

@@ -20,7 +20,7 @@ export {
   transformIfDefined,
 } from './nullish-utils.js';
 
-export { toUrl } from './url-utils.js';
+export { isUrlValid, toUrl } from './url-utils.js';
 
 export * from './browser/index.js';
 export * from './collection-utils/index.js';
@@ -73,3 +73,20 @@ export {
 } from './async-utils.js';
 
 export { toDate } from './date-utils.js';
+
+export {
+  dirExtists,
+  dirExtistsSync,
+  fileExtists,
+  fileExtistsSync,
+  getFileSize,
+  getFileSizeSync,
+  isDirectory,
+  isDirectorySync,
+  isFile,
+  isFileSync,
+  mkDirIfNotExists,
+  mkDirIfNotExistsSync,
+  pathAccess,
+  pathAccessSync,
+} from './file-utils.ts';

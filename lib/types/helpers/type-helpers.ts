@@ -78,3 +78,12 @@ export type DeepReadonly<T> = Readonly<{
       ? Readonly<Array<DeepReadonly<A>>>
       : DeepReadonly<T[K]>;
 }>;
+
+/**
+ * Exclude the promise type from the given type.
+ * If the type is a promise, it returns `never`, otherwise it returns the original type.
+ *
+ * @typeParam T - The type to exclude the promise from.
+ * @returns The type without the promise.
+ */
+export type NotPromise<T> = T extends Promise<T> ? never : T;

@@ -1,6 +1,7 @@
 import type { URL } from 'url';
 import { CtorParam1, CtorParam2 } from '../types/helpers/function-helpers.js';
 import { TOrUndefined } from '../types/helpers/nullish-helpers.ts';
+import { isDefined } from './nullish-utils.ts';
 
 const requireURL = (
   value: CtorParam1<typeof URL>,
@@ -27,3 +28,11 @@ export const toUrl = (
 
   return undefined;
 };
+
+/**
+ * Checks if a URL is valid.
+ * @param value - The URL to validate.
+ * @returns A boolean indicating whether the URL is valid or not.
+ */
+export const isUrlValid = (value: CtorParam1<typeof URL>): boolean =>
+  isDefined(toUrl(value));

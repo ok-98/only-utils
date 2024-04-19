@@ -1,5 +1,19 @@
 # only-utils
 
+## 0.4.5
+
+### Patch Changes
+
+- fixed file-utils
+- updated boolchain
+
+## 0.4.3
+
+### Patch Changes
+
+- added url util for checking if url is valid
+- added file utils
+
 ## 0.4.2
 
 ### Patch Changes

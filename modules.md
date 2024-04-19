@@ -63,6 +63,7 @@
 - [Mutable](modules.md#mutable)
 - [Nested](modules.md#nested)
 - [NonEmptyArray](modules.md#nonemptyarray)
+- [NotPromise](modules.md#notpromise)
 - [Nullish](modules.md#nullish)
 - [Optional](modules.md#optional)
 - [OptionalKeys](modules.md#optionalkeys)
@@ -118,9 +119,13 @@
 - [asyncForEach](modules.md#asyncforeach)
 - [braceYourself](modules.md#braceyourself)
 - [delayedFunction](modules.md#delayedfunction)
+- [dirExtists](modules.md#dirextists)
+- [dirExtistsSync](modules.md#dirextistssync)
 - [emptyListToUndefined](modules.md#emptylisttoundefined)
 - [emptyStringToUndefined](modules.md#emptystringtoundefined)
 - [executeIfDefined](modules.md#executeifdefined)
+- [fileExtists](modules.md#fileextists)
+- [fileExtistsSync](modules.md#fileextistssync)
 - [filterAsync](modules.md#filterasync)
 - [filterNullishArray](modules.md#filternullisharray)
 - [filterNullishMap](modules.md#filternullishmap)
@@ -128,6 +133,8 @@
 - [getComputedValue](modules.md#getcomputedvalue)
 - [getCssVarValue](modules.md#getcssvarvalue)
 - [getCssVariableName](modules.md#getcssvariablename)
+- [getFileSize](modules.md#getfilesize)
+- [getFileSizeSync](modules.md#getfilesizesync)
 - [hasApproximatly](modules.md#hasapproximatly)
 - [hasBetween](modules.md#hasbetween)
 - [hasExactly](modules.md#hasexactly)
@@ -139,12 +146,16 @@
 - [isAwaited](modules.md#isawaited)
 - [isBoolean](modules.md#isboolean)
 - [isDefined](modules.md#isdefined)
+- [isDirectory](modules.md#isdirectory)
+- [isDirectorySync](modules.md#isdirectorysync)
 - [isEmpty](modules.md#isempty)
 - [isEmptyObject](modules.md#isemptyobject)
 - [isFalse](modules.md#isfalse)
 - [isFalsey](modules.md#isfalsey)
 - [isFalseyValue](modules.md#isfalseyvalue)
 - [isFalsyArray](modules.md#isfalsyarray)
+- [isFile](modules.md#isfile)
+- [isFileSync](modules.md#isfilesync)
 - [isMap](modules.md#ismap)
 - [isNegative](modules.md#isnegative)
 - [isNotDefined](modules.md#isnotdefined)
@@ -158,12 +169,17 @@
 - [isTruthyArray](modules.md#istruthyarray)
 - [isTruthyValue](modules.md#istruthyvalue)
 - [isType](modules.md#istype)
+- [isUrlValid](modules.md#isurlvalid)
 - [mapAsync](modules.md#mapasync)
 - [mapRecursiveArray](modules.md#maprecursivearray)
+- [mkDirIfNotExists](modules.md#mkdirifnotexists)
+- [mkDirIfNotExistsSync](modules.md#mkdirifnotexistssync)
 - [negate](modules.md#negate)
 - [nonEmpty](modules.md#nonempty)
 - [optional](modules.md#optional-1)
 - [parallel](modules.md#parallel)
+- [pathAccess](modules.md#pathaccess)
+- [pathAccessSync](modules.md#pathaccesssync)
 - [quote](modules.md#quote)
 - [retry](modules.md#retry)
 - [sleep](modules.md#sleep)
@@ -210,7 +226,7 @@ Represents any function that takes any number of arguments and returns a value o
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:23](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L23)
+[lib/types/helpers/function-helpers.ts:23](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L23)
 
 ___
 
@@ -228,7 +244,7 @@ Extracts the element type from an array type.
 
 #### Defined in
 
-[lib/types/helpers/collection-helpers.ts:6](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/collection-helpers.ts#L6)
+[lib/types/helpers/collection-helpers.ts:6](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/collection-helpers.ts#L6)
 
 ___
 
@@ -246,7 +262,7 @@ Represents a type that can be either a single Value or an Array of Value.
 
 #### Defined in
 
-[lib/types/helpers/collection-helpers.ts:13](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/collection-helpers.ts#L13)
+[lib/types/helpers/collection-helpers.ts:13](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/collection-helpers.ts#L13)
 
 ___
 
@@ -264,7 +280,7 @@ Represents an array type with at least one element.
 
 #### Defined in
 
-[lib/types/helpers/collection-helpers.ts:51](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/collection-helpers.ts#L51)
+[lib/types/helpers/collection-helpers.ts:51](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/collection-helpers.ts#L51)
 
 ___
 
@@ -282,7 +298,7 @@ Represents an array with at least two elements of type T.
 
 #### Defined in
 
-[lib/types/helpers/collection-helpers.ts:57](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/collection-helpers.ts#L57)
+[lib/types/helpers/collection-helpers.ts:57](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/collection-helpers.ts#L57)
 
 ___
 
@@ -300,7 +316,7 @@ Represents an array with at least three elements of type T.
 
 #### Defined in
 
-[lib/types/helpers/collection-helpers.ts:63](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/collection-helpers.ts#L63)
+[lib/types/helpers/collection-helpers.ts:63](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/collection-helpers.ts#L63)
 
 ___
 
@@ -318,7 +334,7 @@ Represents an array with at least four elements of type T.
 
 #### Defined in
 
-[lib/types/helpers/collection-helpers.ts:69](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/collection-helpers.ts#L69)
+[lib/types/helpers/collection-helpers.ts:69](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/collection-helpers.ts#L69)
 
 ___
 
@@ -350,7 +366,7 @@ Represents a function that can be either asynchronous or synchronous.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:430](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L430)
+[lib/types/helpers/function-helpers.ts:430](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L430)
 
 ___
 
@@ -368,7 +384,7 @@ Extracts the resolved type from a Promise.
 
 #### Defined in
 
-[lib/types/helpers/type-helpers.ts:59](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/type-helpers.ts#L59)
+[lib/types/helpers/type-helpers.ts:59](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/type-helpers.ts#L59)
 
 ___
 
@@ -387,7 +403,7 @@ It can be one of the following types:
 
 #### Defined in
 
-[lib/types/helpers/string-helpers.ts:11](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/string-helpers.ts#L11)
+[lib/types/helpers/string-helpers.ts:11](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/string-helpers.ts#L11)
 
 ___
 
@@ -407,7 +423,7 @@ It can be an Array, a Set, or a Map.
 
 #### Defined in
 
-[lib/types/helpers/collection-helpers.ts:27](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/collection-helpers.ts#L27)
+[lib/types/helpers/collection-helpers.ts:27](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/collection-helpers.ts#L27)
 
 ___
 
@@ -426,7 +442,7 @@ Represents a type that can either be a single Value or a [Collection](modules.md
 
 #### Defined in
 
-[lib/types/helpers/collection-helpers.ts:37](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/collection-helpers.ts#L37)
+[lib/types/helpers/collection-helpers.ts:37](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/collection-helpers.ts#L37)
 
 ___
 
@@ -439,7 +455,7 @@ These values include 'initial', 'inherit', and 'unset'.
 
 #### Defined in
 
-[lib/types/helpers/browser-helpers.ts:38](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/browser-helpers.ts#L38)
+[lib/types/helpers/browser-helpers.ts:38](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/browser-helpers.ts#L38)
 
 ___
 
@@ -451,7 +467,7 @@ Represents the available operators for CSS calc() function.
 
 #### Defined in
 
-[lib/types/helpers/browser-helpers.ts:78](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/browser-helpers.ts#L78)
+[lib/types/helpers/browser-helpers.ts:78](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/browser-helpers.ts#L78)
 
 ___
 
@@ -464,7 +480,7 @@ It can be a base color, a color function, or a color mixing function.
 
 #### Defined in
 
-[lib/types/helpers/browser-helpers.ts:248](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/browser-helpers.ts#L248)
+[lib/types/helpers/browser-helpers.ts:248](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/browser-helpers.ts#L248)
 
 ___
 
@@ -477,7 +493,7 @@ It can be either a 6-digit hexadecimal color code or a CSS variable.
 
 #### Defined in
 
-[lib/types/helpers/browser-helpers.ts:109](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/browser-helpers.ts#L109)
+[lib/types/helpers/browser-helpers.ts:109](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/browser-helpers.ts#L109)
 
 ___
 
@@ -495,7 +511,7 @@ The color value can be in the following formats:
 
 #### Defined in
 
-[lib/types/helpers/browser-helpers.ts:155](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/browser-helpers.ts#L155)
+[lib/types/helpers/browser-helpers.ts:155](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/browser-helpers.ts#L155)
 
 ___
 
@@ -507,7 +523,7 @@ Represents a CSS color in the Lab color space.
 
 #### Defined in
 
-[lib/types/helpers/browser-helpers.ts:162](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/browser-helpers.ts#L162)
+[lib/types/helpers/browser-helpers.ts:162](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/browser-helpers.ts#L162)
 
 ___
 
@@ -537,7 +553,7 @@ const color4: CssColorRgb = 'rgb(255, 0, 0 / 0.5)';
 
 #### Defined in
 
-[lib/types/helpers/browser-helpers.ts:143](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/browser-helpers.ts#L143)
+[lib/types/helpers/browser-helpers.ts:143](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/browser-helpers.ts#L143)
 
 ___
 
@@ -555,7 +571,7 @@ Represents a CSS property value consisting of four lengths of type T.
 
 #### Defined in
 
-[lib/types/helpers/browser-helpers.ts:72](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/browser-helpers.ts#L72)
+[lib/types/helpers/browser-helpers.ts:72](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/browser-helpers.ts#L72)
 
 ___
 
@@ -568,7 +584,7 @@ The operation is defined as a string wrapped in the `calc()` function.
 
 #### Defined in
 
-[lib/types/helpers/browser-helpers.ts:103](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/browser-helpers.ts#L103)
+[lib/types/helpers/browser-helpers.ts:103](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/browser-helpers.ts#L103)
 
 ___
 
@@ -586,7 +602,7 @@ Represents a CSS length value with type safety.
 
 #### Defined in
 
-[lib/types/helpers/browser-helpers.ts:50](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/browser-helpers.ts#L50)
+[lib/types/helpers/browser-helpers.ts:50](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/browser-helpers.ts#L50)
 
 ___
 
@@ -598,7 +614,7 @@ Represents the available CSS length units.
 
 #### Defined in
 
-[lib/types/helpers/browser-helpers.ts:18](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/browser-helpers.ts#L18)
+[lib/types/helpers/browser-helpers.ts:18](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/browser-helpers.ts#L18)
 
 ___
 
@@ -610,7 +626,7 @@ Represents a list of CSS named colors.
 
 #### Defined in
 
-[lib/types/helpers/browser-helpers.ts:181](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/browser-helpers.ts#L181)
+[lib/types/helpers/browser-helpers.ts:181](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/browser-helpers.ts#L181)
 
 ___
 
@@ -623,7 +639,7 @@ It can be either a single operation or a combination of two operations.
 
 #### Defined in
 
-[lib/types/helpers/browser-helpers.ts:95](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/browser-helpers.ts#L95)
+[lib/types/helpers/browser-helpers.ts:95](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/browser-helpers.ts#L95)
 
 ___
 
@@ -635,7 +651,7 @@ Represents the system colors available for CSS styling in a browser.
 
 #### Defined in
 
-[lib/types/helpers/browser-helpers.ts:169](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/browser-helpers.ts#L169)
+[lib/types/helpers/browser-helpers.ts:169](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/browser-helpers.ts#L169)
 
 ___
 
@@ -653,7 +669,7 @@ Represents a pair of CSS lengths of the same type.
 
 #### Defined in
 
-[lib/types/helpers/browser-helpers.ts:66](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/browser-helpers.ts#L66)
+[lib/types/helpers/browser-helpers.ts:66](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/browser-helpers.ts#L66)
 
 ___
 
@@ -665,7 +681,7 @@ Represents a CSS variable.
 
 #### Defined in
 
-[lib/types/helpers/browser-helpers.ts:13](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/browser-helpers.ts#L13)
+[lib/types/helpers/browser-helpers.ts:13](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/browser-helpers.ts#L13)
 
 ___
 
@@ -677,7 +693,7 @@ Represents the name of a CSS variable.
 
 #### Defined in
 
-[lib/types/helpers/browser-helpers.ts:7](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/browser-helpers.ts#L7)
+[lib/types/helpers/browser-helpers.ts:7](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/browser-helpers.ts#L7)
 
 ___
 
@@ -695,7 +711,7 @@ Extracts the first parameter type from a constructor function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:231](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L231)
+[lib/types/helpers/function-helpers.ts:231](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L231)
 
 ___
 
@@ -713,7 +729,7 @@ Extracts the first parameter type from a constructor function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:238](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L238)
+[lib/types/helpers/function-helpers.ts:238](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L238)
 
 ___
 
@@ -731,7 +747,7 @@ Extracts the tenth parameter type from a constructor function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:397](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L397)
+[lib/types/helpers/function-helpers.ts:397](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L397)
 
 ___
 
@@ -749,7 +765,7 @@ Extracts the type of the second constructor parameter from a given class.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:250](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L250)
+[lib/types/helpers/function-helpers.ts:250](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L250)
 
 ___
 
@@ -767,7 +783,7 @@ Extracts the third parameter type from a constructor function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:264](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L264)
+[lib/types/helpers/function-helpers.ts:264](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L264)
 
 ___
 
@@ -785,7 +801,7 @@ Extracts the fourth parameter type from a constructor function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:280](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L280)
+[lib/types/helpers/function-helpers.ts:280](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L280)
 
 ___
 
@@ -803,7 +819,7 @@ Extracts the fifth parameter type from a constructor function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:297](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L297)
+[lib/types/helpers/function-helpers.ts:297](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L297)
 
 ___
 
@@ -821,7 +837,7 @@ Extracts the sixth parameter type from a constructor function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:315](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L315)
+[lib/types/helpers/function-helpers.ts:315](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L315)
 
 ___
 
@@ -839,7 +855,7 @@ Extracts the seventh parameter type from a constructor function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:334](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L334)
+[lib/types/helpers/function-helpers.ts:334](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L334)
 
 ___
 
@@ -857,7 +873,7 @@ Extracts the eighth parameter type from a constructor function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:354](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L354)
+[lib/types/helpers/function-helpers.ts:354](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L354)
 
 ___
 
@@ -875,7 +891,7 @@ Extracts the ninth parameter type from a constructor function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:375](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L375)
+[lib/types/helpers/function-helpers.ts:375](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L375)
 
 ___
 
@@ -893,7 +909,7 @@ Extracts the parameter types from a constructor function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:212](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L212)
+[lib/types/helpers/function-helpers.ts:212](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L212)
 
 ___
 
@@ -911,7 +927,7 @@ Extracts the constructor parameters from a class constructor type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:223](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L223)
+[lib/types/helpers/function-helpers.ts:223](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L223)
 
 ___
 
@@ -929,7 +945,7 @@ Represents a type that makes all properties of an object and its nested properti
 
 #### Defined in
 
-[lib/types/helpers/type-helpers.ts:74](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/type-helpers.ts#L74)
+[lib/types/helpers/type-helpers.ts:74](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/type-helpers.ts#L74)
 
 ___
 
@@ -955,7 +971,7 @@ Represents an empty function that takes no arguments and returns a value of type
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:17](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L17)
+[lib/types/helpers/function-helpers.ts:17](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L17)
 
 ___
 
@@ -968,7 +984,7 @@ It can be either a single number string, a small hex character, or a big hex cha
 
 #### Defined in
 
-[lib/types/helpers/string-helpers.ts:60](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/string-helpers.ts#L60)
+[lib/types/helpers/string-helpers.ts:60](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/string-helpers.ts#L60)
 
 ___
 
@@ -986,7 +1002,7 @@ Extracts the instance type from a constructor function type.
 
 #### Defined in
 
-[lib/types/helpers/type-helpers.ts:66](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/type-helpers.ts#L66)
+[lib/types/helpers/type-helpers.ts:66](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/type-helpers.ts#L66)
 
 ___
 
@@ -1004,7 +1020,7 @@ Makes all properties of a type mutable by removing the readonly modifier.
 
 #### Defined in
 
-[lib/types/helpers/type-helpers.ts:14](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/type-helpers.ts#L14)
+[lib/types/helpers/type-helpers.ts:14](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/type-helpers.ts#L14)
 
 ___
 
@@ -1023,7 +1039,7 @@ Represents a nested object with a specified child key.
 
 #### Defined in
 
-[lib/types/helpers/type-helpers.ts:6](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/type-helpers.ts#L6)
+[lib/types/helpers/type-helpers.ts:6](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/type-helpers.ts#L6)
 
 ___
 
@@ -1041,7 +1057,26 @@ Represents a non-empty Array type.
 
 #### Defined in
 
-[lib/types/helpers/collection-helpers.ts:45](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/collection-helpers.ts#L45)
+[lib/types/helpers/collection-helpers.ts:45](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/collection-helpers.ts#L45)
+
+___
+
+### NotPromise
+
+Ƭ **NotPromise**\<`T`\>: `T` extends `Promise`\<`T`\> ? `never` : `T`
+
+Exclude the promise type from the given type.
+If the type is a promise, it returns `never`, otherwise it returns the original type.
+
+#### Type parameters
+
+| Name | Description |
+| :------ | :------ |
+| `T` | The type to exclude the promise from. |
+
+#### Defined in
+
+[lib/types/helpers/type-helpers.ts:89](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/type-helpers.ts#L89)
 
 ___
 
@@ -1053,7 +1088,7 @@ Represents a type that can be null or undefined.
 
 #### Defined in
 
-[lib/types/helpers/nullish-helpers.ts:18](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/nullish-helpers.ts#L18)
+[lib/types/helpers/nullish-helpers.ts:18](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/nullish-helpers.ts#L18)
 
 ___
 
@@ -1071,7 +1106,7 @@ Represents an optional value that can either be of type T or [Nullish](modules.m
 
 #### Defined in
 
-[lib/types/helpers/nullish-helpers.ts:24](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/nullish-helpers.ts#L24)
+[lib/types/helpers/nullish-helpers.ts:24](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/nullish-helpers.ts#L24)
 
 ___
 
@@ -1089,7 +1124,7 @@ Get the optional keys of a given type.
 
 #### Defined in
 
-[lib/types/helpers/nullish-helpers.ts:32](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/nullish-helpers.ts#L32)
+[lib/types/helpers/nullish-helpers.ts:32](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/nullish-helpers.ts#L32)
 
 ___
 
@@ -1122,7 +1157,7 @@ Represents an optional value that may or may not be present.
 
 #### Defined in
 
-[lib/utils/optional-util.ts:12](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/optional-util.ts#L12)
+[lib/utils/optional-util.ts:12](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/optional-util.ts#L12)
 
 ___
 
@@ -1140,7 +1175,7 @@ Extracts the first parameter type from a function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:30](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L30)
+[lib/types/helpers/function-helpers.ts:30](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L30)
 
 ___
 
@@ -1158,7 +1193,7 @@ Extracts the first parameter type from a function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:42](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L42)
+[lib/types/helpers/function-helpers.ts:42](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L42)
 
 ___
 
@@ -1176,7 +1211,7 @@ Extracts the tenth parameter type from a function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:180](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L180)
+[lib/types/helpers/function-helpers.ts:180](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L180)
 
 ___
 
@@ -1194,7 +1229,7 @@ Extracts the second parameter type from a function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:49](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L49)
+[lib/types/helpers/function-helpers.ts:49](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L49)
 
 ___
 
@@ -1212,7 +1247,7 @@ Extracts the third parameter type from a function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:61](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L61)
+[lib/types/helpers/function-helpers.ts:61](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L61)
 
 ___
 
@@ -1230,7 +1265,7 @@ Extracts the fourth parameter type from a function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:75](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L75)
+[lib/types/helpers/function-helpers.ts:75](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L75)
 
 ___
 
@@ -1248,7 +1283,7 @@ Extracts the fifth parameter type from a function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:90](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L90)
+[lib/types/helpers/function-helpers.ts:90](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L90)
 
 ___
 
@@ -1266,7 +1301,7 @@ Extracts the sixth parameter type from a function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:106](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L106)
+[lib/types/helpers/function-helpers.ts:106](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L106)
 
 ___
 
@@ -1284,7 +1319,7 @@ Extracts the seventh parameter type from a function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:123](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L123)
+[lib/types/helpers/function-helpers.ts:123](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L123)
 
 ___
 
@@ -1302,7 +1337,7 @@ Extracts the eighth parameter type from a function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:141](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L141)
+[lib/types/helpers/function-helpers.ts:141](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L141)
 
 ___
 
@@ -1320,7 +1355,7 @@ Extracts the ninth parameter type from a function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:160](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L160)
+[lib/types/helpers/function-helpers.ts:160](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L160)
 
 ___
 
@@ -1338,7 +1373,7 @@ Extracts the parameter types from a function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:201](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L201)
+[lib/types/helpers/function-helpers.ts:201](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L201)
 
 ___
 
@@ -1356,7 +1391,7 @@ Type helper that prettifies the properties of a given type.
 
 #### Defined in
 
-[lib/types/helpers/type-helpers.ts:22](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/type-helpers.ts#L22)
+[lib/types/helpers/type-helpers.ts:22](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/type-helpers.ts#L22)
 
 ___
 
@@ -1369,7 +1404,7 @@ A primitive can be one of the following types: number, string, boolean, bigint, 
 
 #### Defined in
 
-[lib/types/helpers/primitive-helpers.ts:7](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/primitive-helpers.ts#L7)
+[lib/types/helpers/primitive-helpers.ts:7](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/primitive-helpers.ts#L7)
 
 ___
 
@@ -1382,7 +1417,7 @@ or null or undefined.
 
 #### Defined in
 
-[lib/types/helpers/primitive-helpers.ts:13](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/primitive-helpers.ts#L13)
+[lib/types/helpers/primitive-helpers.ts:13](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/primitive-helpers.ts#L13)
 
 ___
 
@@ -1404,7 +1439,7 @@ T - The type of the value.
 
 #### Defined in
 
-[lib/types/helpers/type-helpers.ts:52](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/type-helpers.ts#L52)
+[lib/types/helpers/type-helpers.ts:52](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/type-helpers.ts#L52)
 
 ___
 
@@ -1436,7 +1471,7 @@ Promisifies a function type.
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:420](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L420)
+[lib/types/helpers/function-helpers.ts:420](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L420)
 
 ___
 
@@ -1449,7 +1484,7 @@ It can be one of the following characters: "'", '"', '`', '´'.
 
 #### Defined in
 
-[lib/types/helpers/string-helpers.ts:22](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/string-helpers.ts#L22)
+[lib/types/helpers/string-helpers.ts:22](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/string-helpers.ts#L22)
 
 ___
 
@@ -1467,7 +1502,7 @@ Extracts the key type from a record type.
 
 #### Defined in
 
-[lib/types/helpers/type-helpers.ts:31](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/type-helpers.ts#L31)
+[lib/types/helpers/type-helpers.ts:31](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/type-helpers.ts#L31)
 
 ___
 
@@ -1485,7 +1520,7 @@ Represents a key-value pair in a record.
 
 #### Defined in
 
-[lib/types/helpers/type-helpers.ts:45](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/type-helpers.ts#L45)
+[lib/types/helpers/type-helpers.ts:45](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/type-helpers.ts#L45)
 
 ___
 
@@ -1503,7 +1538,7 @@ Extracts the value type from a record type.
 
 #### Defined in
 
-[lib/types/helpers/type-helpers.ts:38](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/type-helpers.ts#L38)
+[lib/types/helpers/type-helpers.ts:38](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/type-helpers.ts#L38)
 
 ___
 
@@ -1521,7 +1556,7 @@ Represents a recursive Array that can contain values of type T, undefined, or ot
 
 #### Defined in
 
-[lib/types/helpers/collection-helpers.ts:75](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/collection-helpers.ts#L75)
+[lib/types/helpers/collection-helpers.ts:75](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/collection-helpers.ts#L75)
 
 ___
 
@@ -1543,7 +1578,7 @@ The type to calculate the required keys for.
 
 #### Defined in
 
-[lib/types/helpers/nullish-helpers.ts:45](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/nullish-helpers.ts#L45)
+[lib/types/helpers/nullish-helpers.ts:45](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/nullish-helpers.ts#L45)
 
 ___
 
@@ -1561,7 +1596,7 @@ Represents a type that can either be a single Value or a Set of Value.
 
 #### Defined in
 
-[lib/types/helpers/collection-helpers.ts:18](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/collection-helpers.ts#L18)
+[lib/types/helpers/collection-helpers.ts:18](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/collection-helpers.ts#L18)
 
 ___
 
@@ -1594,7 +1629,7 @@ Represents a simple function that takes a parameter of type P and returns a valu
 
 #### Defined in
 
-[lib/types/helpers/function-helpers.ts:10](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/function-helpers.ts#L10)
+[lib/types/helpers/function-helpers.ts:10](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/function-helpers.ts#L10)
 
 ___
 
@@ -1607,7 +1642,7 @@ It can only be one of the following values: 0, 1, 2, 3, 4, 5, 6, 7, 8, or 9.
 
 #### Defined in
 
-[lib/types/helpers/string-helpers.ts:44](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/string-helpers.ts#L44)
+[lib/types/helpers/string-helpers.ts:44](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/string-helpers.ts#L44)
 
 ___
 
@@ -1620,7 +1655,7 @@ It can only have values from '0' to '9'.
 
 #### Defined in
 
-[lib/types/helpers/string-helpers.ts:28](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/string-helpers.ts#L28)
+[lib/types/helpers/string-helpers.ts:28](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/string-helpers.ts#L28)
 
 ___
 
@@ -1638,7 +1673,7 @@ Represents a type that can either be of type T or null.
 
 #### Defined in
 
-[lib/types/helpers/nullish-helpers.ts:13](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/nullish-helpers.ts#L13)
+[lib/types/helpers/nullish-helpers.ts:13](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/nullish-helpers.ts#L13)
 
 ___
 
@@ -1656,7 +1691,7 @@ Represents a type that can either be of type T or undefined.
 
 #### Defined in
 
-[lib/types/helpers/nullish-helpers.ts:6](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/types/helpers/nullish-helpers.ts#L6)
+[lib/types/helpers/nullish-helpers.ts:6](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/types/helpers/nullish-helpers.ts#L6)
 
 ## Variables
 
@@ -1668,7 +1703,7 @@ An empty array.
 
 #### Defined in
 
-[lib/utils/const-utils.ts:9](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/const-utils.ts#L9)
+[lib/utils/const-utils.ts:9](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/const-utils.ts#L9)
 
 ___
 
@@ -1680,7 +1715,7 @@ Represents an empty object.
 
 #### Defined in
 
-[lib/utils/const-utils.ts:4](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/const-utils.ts#L4)
+[lib/utils/const-utils.ts:4](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/const-utils.ts#L4)
 
 ## Functions
 
@@ -1702,7 +1737,7 @@ An empty arrow function that takes any number of arguments and returns void.
 
 #### Defined in
 
-[lib/utils/function-utils.ts:6](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/function-utils.ts#L6)
+[lib/utils/function-utils.ts:6](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/function-utils.ts#L6)
 
 ___
 
@@ -1726,7 +1761,7 @@ A Promise that resolves to void.
 
 #### Defined in
 
-[lib/utils/function-utils.ts:14](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/function-utils.ts#L14)
+[lib/utils/function-utils.ts:14](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/function-utils.ts#L14)
 
 ___
 
@@ -1750,7 +1785,7 @@ Always false.
 
 #### Defined in
 
-[lib/utils/bool-utils.ts:13](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/bool-utils.ts#L13)
+[lib/utils/bool-utils.ts:13](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/bool-utils.ts#L13)
 
 ___
 
@@ -1774,7 +1809,7 @@ Always true
 
 #### Defined in
 
-[lib/utils/bool-utils.ts:6](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/bool-utils.ts#L6)
+[lib/utils/bool-utils.ts:6](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/bool-utils.ts#L6)
 
 ___
 
@@ -1804,7 +1839,7 @@ values is T[]
 
 #### Defined in
 
-[lib/utils/nullish-utils.ts:24](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/nullish-utils.ts#L24)
+[lib/utils/nullish-utils.ts:24](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/nullish-utils.ts#L24)
 
 ___
 
@@ -1834,7 +1869,7 @@ Checks if multiple values are equal.
 
 #### Defined in
 
-[lib/utils/object-utils.ts:36](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/object-utils.ts#L36)
+[lib/utils/object-utils.ts:36](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/object-utils.ts#L36)
 
 ___
 
@@ -1864,7 +1899,7 @@ True if all values are not defined, false otherwise.
 
 #### Defined in
 
-[lib/utils/nullish-utils.ts:43](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/nullish-utils.ts#L43)
+[lib/utils/nullish-utils.ts:43](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/nullish-utils.ts#L43)
 
 ___
 
@@ -1895,7 +1930,7 @@ Converts a collection-like value into an array.
 
 #### Defined in
 
-[lib/utils/collection-utils/list-utils.ts:81](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/collection-utils/list-utils.ts#L81)
+[lib/utils/collection-utils/list-utils.ts:81](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/collection-utils/list-utils.ts#L81)
 
 ___
 
@@ -1925,7 +1960,7 @@ The casted value.
 
 #### Defined in
 
-[lib/utils/object-utils.ts:91](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/object-utils.ts#L91)
+[lib/utils/object-utils.ts:91](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/object-utils.ts#L91)
 
 ___
 
@@ -1955,7 +1990,7 @@ The value if it is defined, otherwise null.
 
 #### Defined in
 
-[lib/utils/nullish-utils.ts:72](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/nullish-utils.ts#L72)
+[lib/utils/nullish-utils.ts:72](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/nullish-utils.ts#L72)
 
 ___
 
@@ -1985,7 +2020,7 @@ The corresponding value if it is defined, otherwise undefined.
 
 #### Defined in
 
-[lib/utils/nullish-utils.ts:64](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/nullish-utils.ts#L64)
+[lib/utils/nullish-utils.ts:64](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/nullish-utils.ts#L64)
 
 ___
 
@@ -2012,7 +2047,7 @@ ___
 
 #### Defined in
 
-[lib/utils/collection-utils/list-utils.ts:298](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/collection-utils/list-utils.ts#L298)
+[lib/utils/collection-utils/list-utils.ts:298](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/collection-utils/list-utils.ts#L298)
 
 ___
 
@@ -2037,7 +2072,7 @@ The wrapped value.
 
 #### Defined in
 
-[lib/utils/string-utils.ts:13](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/string-utils.ts#L13)
+[lib/utils/string-utils.ts:13](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/string-utils.ts#L13)
 
 ___
 
@@ -2069,7 +2104,47 @@ A promise that resolves with the result of the function execution.
 
 #### Defined in
 
-[lib/utils/async-utils.ts:44](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/async-utils.ts#L44)
+[lib/utils/async-utils.ts:44](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/async-utils.ts#L44)
+
+___
+
+### dirExtists
+
+▸ **dirExtists**(`path`): `Promise`\<`boolean`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `path` | `PathLike` |
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+#### Defined in
+
+[lib/utils/file-utils.ts:14](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/file-utils.ts#L14)
+
+___
+
+### dirExtistsSync
+
+▸ **dirExtistsSync**(`path`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `path` | `PathLike` |
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[lib/utils/file-utils.ts:17](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/file-utils.ts#L17)
 
 ___
 
@@ -2099,7 +2174,7 @@ The converted list, or undefined if the list is empty.
 
 #### Defined in
 
-[lib/utils/collection-utils/list-utils.ts:186](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/collection-utils/list-utils.ts#L186)
+[lib/utils/collection-utils/list-utils.ts:186](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/collection-utils/list-utils.ts#L186)
 
 ___
 
@@ -2123,7 +2198,7 @@ The converted string value or undefined if the input is an empty string.
 
 #### Defined in
 
-[lib/utils/string-utils.ts:33](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/string-utils.ts#L33)
+[lib/utils/string-utils.ts:33](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/string-utils.ts#L33)
 
 ___
 
@@ -2152,7 +2227,47 @@ Executes the provided callback function if the value is defined.
 
 #### Defined in
 
-[lib/utils/nullish-utils.ts:95](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/nullish-utils.ts#L95)
+[lib/utils/nullish-utils.ts:95](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/nullish-utils.ts#L95)
+
+___
+
+### fileExtists
+
+▸ **fileExtists**(`path`): `Promise`\<`boolean`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `path` | `PathLike` |
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+#### Defined in
+
+[lib/utils/file-utils.ts:8](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/file-utils.ts#L8)
+
+___
+
+### fileExtistsSync
+
+▸ **fileExtistsSync**(`path`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `path` | `PathLike` |
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[lib/utils/file-utils.ts:11](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/file-utils.ts#L11)
 
 ___
 
@@ -2183,7 +2298,7 @@ A promise that resolves to the filtered array.
 
 #### Defined in
 
-[lib/utils/async-utils.ts:106](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/async-utils.ts#L106)
+[lib/utils/async-utils.ts:106](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/async-utils.ts#L106)
 
 ___
 
@@ -2213,7 +2328,7 @@ A new array containing only the non-nullish values.
 
 #### Defined in
 
-[lib/utils/collection-utils/list-utils.ts:92](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/collection-utils/list-utils.ts#L92)
+[lib/utils/collection-utils/list-utils.ts:92](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/collection-utils/list-utils.ts#L92)
 
 ___
 
@@ -2244,7 +2359,7 @@ A new map with the non-nullish values.
 
 #### Defined in
 
-[lib/utils/collection-utils/list-utils.ts:128](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/collection-utils/list-utils.ts#L128)
+[lib/utils/collection-utils/list-utils.ts:128](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/collection-utils/list-utils.ts#L128)
 
 ___
 
@@ -2274,7 +2389,7 @@ A new Set containing only the non-nullish values from the input collection.
 
 #### Defined in
 
-[lib/utils/collection-utils/list-utils.ts:102](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/collection-utils/list-utils.ts#L102)
+[lib/utils/collection-utils/list-utils.ts:102](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/collection-utils/list-utils.ts#L102)
 
 ___
 
@@ -2305,7 +2420,7 @@ if the function is executed outside of a browser context.
 
 #### Defined in
 
-[lib/utils/browser/css-utils.ts:69](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/browser/css-utils.ts#L69)
+[lib/utils/browser/css-utils.ts:69](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/browser/css-utils.ts#L69)
 
 ___
 
@@ -2335,7 +2450,7 @@ If the function is executed outside of a browser context.
 
 #### Defined in
 
-[lib/utils/browser/css-utils.ts:41](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/browser/css-utils.ts#L41)
+[lib/utils/browser/css-utils.ts:41](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/browser/css-utils.ts#L41)
 
 ___
 
@@ -2359,7 +2474,51 @@ The name of the CSS variable, or undefined if the value is not a valid CSS varia
 
 #### Defined in
 
-[lib/utils/browser/css-utils.ts:15](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/browser/css-utils.ts#L15)
+[lib/utils/browser/css-utils.ts:15](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/browser/css-utils.ts#L15)
+
+___
+
+### getFileSize
+
+▸ **getFileSize**(`filePath`): `Promise`\<`any`\>
+
+Returns the size of a file in bytes.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `filePath` | `PathLike` | The path of the file to check. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[lib/utils/file-utils.ts:106](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/file-utils.ts#L106)
+
+___
+
+### getFileSizeSync
+
+▸ **getFileSizeSync**(`filePath`): `any`
+
+Returns the size of a file in bytes.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `filePath` | `PathLike` | The path of the file to check. |
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[lib/utils/file-utils.ts:116](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/file-utils.ts#L116)
 
 ___
 
@@ -2391,7 +2550,7 @@ A boolean indicating whether the value exists within the approximate range.
 
 #### Defined in
 
-[lib/utils/collection-utils/list-utils.ts:292](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/collection-utils/list-utils.ts#L292)
+[lib/utils/collection-utils/list-utils.ts:292](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/collection-utils/list-utils.ts#L292)
 
 ___
 
@@ -2423,7 +2582,7 @@ Checks if the length of a collection-like value falls within a specified range.
 
 #### Defined in
 
-[lib/utils/collection-utils/list-utils.ts:263](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/collection-utils/list-utils.ts#L263)
+[lib/utils/collection-utils/list-utils.ts:263](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/collection-utils/list-utils.ts#L263)
 
 ___
 
@@ -2454,7 +2613,7 @@ Checks if a collection has exactly a specified number of elements.
 
 #### Defined in
 
-[lib/utils/collection-utils/list-utils.ts:253](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/collection-utils/list-utils.ts#L253)
+[lib/utils/collection-utils/list-utils.ts:253](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/collection-utils/list-utils.ts#L253)
 
 ___
 
@@ -2485,7 +2644,7 @@ A boolean indicating whether the object has the specified key.
 
 #### Defined in
 
-[lib/utils/object-utils.ts:17](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/object-utils.ts#L17)
+[lib/utils/object-utils.ts:17](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/object-utils.ts#L17)
 
 ___
 
@@ -2517,7 +2676,7 @@ True if the collection has less than x elements (or x elements if equals is true
 
 #### Defined in
 
-[lib/utils/collection-utils/list-utils.ts:238](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/collection-utils/list-utils.ts#L238)
+[lib/utils/collection-utils/list-utils.ts:238](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/collection-utils/list-utils.ts#L238)
 
 ___
 
@@ -2549,7 +2708,7 @@ True if the collection has more than x elements (or exactly x elements if equals
 
 #### Defined in
 
-[lib/utils/collection-utils/list-utils.ts:222](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/collection-utils/list-utils.ts#L222)
+[lib/utils/collection-utils/list-utils.ts:222](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/collection-utils/list-utils.ts#L222)
 
 ___
 
@@ -2579,7 +2738,7 @@ The input value.
 
 #### Defined in
 
-[lib/utils/function-utils.ts:34](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/function-utils.ts#L34)
+[lib/utils/function-utils.ts:34](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/function-utils.ts#L34)
 
 ___
 
@@ -2609,7 +2768,7 @@ value is T[]
 
 #### Defined in
 
-[lib/utils/collection-utils/list-utils.ts:30](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/collection-utils/list-utils.ts#L30)
+[lib/utils/collection-utils/list-utils.ts:30](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/collection-utils/list-utils.ts#L30)
 
 ___
 
@@ -2639,7 +2798,7 @@ value is T
 
 #### Defined in
 
-[lib/utils/async-utils.ts:23](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/async-utils.ts#L23)
+[lib/utils/async-utils.ts:23](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/async-utils.ts#L23)
 
 ___
 
@@ -2663,7 +2822,7 @@ value is boolean
 
 #### Defined in
 
-[lib/utils/bool-utils.ts:37](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/bool-utils.ts#L37)
+[lib/utils/bool-utils.ts:37](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/bool-utils.ts#L37)
 
 ___
 
@@ -2693,7 +2852,55 @@ value is T
 
 #### Defined in
 
-[lib/utils/nullish-utils.ts:16](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/nullish-utils.ts#L16)
+[lib/utils/nullish-utils.ts:16](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/nullish-utils.ts#L16)
+
+___
+
+### isDirectory
+
+▸ **isDirectory**(`path`): `Promise`\<`any`\>
+
+Checks if a path is a directory.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `path` | `PathLike` | The path to check. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+`true` if the path is a directory, `false` otherwise.
+
+#### Defined in
+
+[lib/utils/file-utils.ts:127](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/file-utils.ts#L127)
+
+___
+
+### isDirectorySync
+
+▸ **isDirectorySync**(`path`): `any`
+
+Checks if the given path is a directory synchronously.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `path` | `PathLike` | The path to check. |
+
+#### Returns
+
+`any`
+
+Returns `true` if the path is a directory, `false` otherwise.
+
+#### Defined in
+
+[lib/utils/file-utils.ts:139](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/file-utils.ts#L139)
 
 ___
 
@@ -2724,7 +2931,7 @@ A boolean indicating whether the collection-like value is empty.
 
 #### Defined in
 
-[lib/utils/collection-utils/list-utils.ts:152](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/collection-utils/list-utils.ts#L152)
+[lib/utils/collection-utils/list-utils.ts:152](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/collection-utils/list-utils.ts#L152)
 
 ___
 
@@ -2754,7 +2961,7 @@ True if the object is empty, false otherwise.
 
 #### Defined in
 
-[lib/utils/object-utils.ts:25](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/object-utils.ts#L25)
+[lib/utils/object-utils.ts:25](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/object-utils.ts#L25)
 
 ___
 
@@ -2778,7 +2985,7 @@ Returns true if the value is false, otherwise returns false.
 
 #### Defined in
 
-[lib/utils/bool-utils.ts:21](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/bool-utils.ts#L21)
+[lib/utils/bool-utils.ts:21](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/bool-utils.ts#L21)
 
 ___
 
@@ -2802,7 +3009,7 @@ A boolean indicating whether the value is falsey.
 
 #### Defined in
 
-[lib/utils/bool-utils.ts:94](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/bool-utils.ts#L94)
+[lib/utils/bool-utils.ts:94](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/bool-utils.ts#L94)
 
 ___
 
@@ -2826,7 +3033,7 @@ Checks if a value is falsey.
 
 #### Defined in
 
-[lib/utils/bool-utils.ts:54](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/bool-utils.ts#L54)
+[lib/utils/bool-utils.ts:54](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/bool-utils.ts#L54)
 
 ___
 
@@ -2850,7 +3057,55 @@ Checks if the given value is a falsy array.
 
 #### Defined in
 
-[lib/utils/bool-utils.ts:76](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/bool-utils.ts#L76)
+[lib/utils/bool-utils.ts:76](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/bool-utils.ts#L76)
+
+___
+
+### isFile
+
+▸ **isFile**(`path`): `Promise`\<`any`\>
+
+Checks if a path is a file.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `path` | `PathLike` | The path to check. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+`true` if the path is a file, `false` otherwise.
+
+#### Defined in
+
+[lib/utils/file-utils.ts:150](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/file-utils.ts#L150)
+
+___
+
+### isFileSync
+
+▸ **isFileSync**(`path`): `any`
+
+Checks if a file exists at the given path.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `path` | `PathLike` | The path to the file. |
+
+#### Returns
+
+`any`
+
+True if the file exists, false otherwise.
+
+#### Defined in
+
+[lib/utils/file-utils.ts:162](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/file-utils.ts#L162)
 
 ___
 
@@ -2881,7 +3136,7 @@ True if the value is an instance of Map, false otherwise.
 
 #### Defined in
 
-[lib/utils/collection-utils/list-utils.ts:50](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/collection-utils/list-utils.ts#L50)
+[lib/utils/collection-utils/list-utils.ts:50](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/collection-utils/list-utils.ts#L50)
 
 ___
 
@@ -2905,7 +3160,7 @@ Checks if a number is negative.
 
 #### Defined in
 
-[lib/utils/number-utils.ts:16](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/number-utils.ts#L16)
+[lib/utils/number-utils.ts:16](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/number-utils.ts#L16)
 
 ___
 
@@ -2935,7 +3190,7 @@ A boolean indicating whether the value is not defined.
 
 #### Defined in
 
-[lib/utils/nullish-utils.ts:35](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/nullish-utils.ts#L35)
+[lib/utils/nullish-utils.ts:35](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/nullish-utils.ts#L35)
 
 ___
 
@@ -2960,7 +3215,7 @@ True if the number is positive, false otherwise.
 
 #### Defined in
 
-[lib/utils/number-utils.ts:7](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/number-utils.ts#L7)
+[lib/utils/number-utils.ts:7](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/number-utils.ts#L7)
 
 ___
 
@@ -2984,7 +3239,7 @@ Returns true if the value is a primitive type, false otherwise.
 
 #### Defined in
 
-[lib/utils/object-utils.ts:57](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/object-utils.ts#L57)
+[lib/utils/object-utils.ts:57](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/object-utils.ts#L57)
 
 ___
 
@@ -3008,7 +3263,7 @@ value is PrimitiveNullish
 
 #### Defined in
 
-[lib/utils/object-utils.ts:74](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/object-utils.ts#L74)
+[lib/utils/object-utils.ts:74](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/object-utils.ts#L74)
 
 ___
 
@@ -3038,7 +3293,7 @@ True if the value is a Promise, false otherwise.
 
 #### Defined in
 
-[lib/utils/async-utils.ts:12](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/async-utils.ts#L12)
+[lib/utils/async-utils.ts:12](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/async-utils.ts#L12)
 
 ___
 
@@ -3068,7 +3323,7 @@ value is Set\<T\>
 
 #### Defined in
 
-[lib/utils/collection-utils/list-utils.ts:39](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/collection-utils/list-utils.ts#L39)
+[lib/utils/collection-utils/list-utils.ts:39](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/collection-utils/list-utils.ts#L39)
 
 ___
 
@@ -3092,7 +3347,7 @@ Returns true if the value is true, otherwise returns false.
 
 #### Defined in
 
-[lib/utils/bool-utils.ts:29](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/bool-utils.ts#L29)
+[lib/utils/bool-utils.ts:29](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/bool-utils.ts#L29)
 
 ___
 
@@ -3118,7 +3373,7 @@ A boolean indicating whether the value is truthy.
 
 #### Defined in
 
-[lib/utils/bool-utils.ts:86](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/bool-utils.ts#L86)
+[lib/utils/bool-utils.ts:86](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/bool-utils.ts#L86)
 
 ___
 
@@ -3142,7 +3397,7 @@ Checks if a value is a truthy array.
 
 #### Defined in
 
-[lib/utils/bool-utils.ts:67](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/bool-utils.ts#L67)
+[lib/utils/bool-utils.ts:67](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/bool-utils.ts#L67)
 
 ___
 
@@ -3166,7 +3421,7 @@ Checks if a value is truthy.
 
 #### Defined in
 
-[lib/utils/bool-utils.ts:60](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/bool-utils.ts#L60)
+[lib/utils/bool-utils.ts:60](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/bool-utils.ts#L60)
 
 ___
 
@@ -3197,7 +3452,31 @@ True if the value matches the specified type, false otherwise.
 
 #### Defined in
 
-[lib/utils/object-utils.ts:101](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/object-utils.ts#L101)
+[lib/utils/object-utils.ts:101](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/object-utils.ts#L101)
+
+___
+
+### isUrlValid
+
+▸ **isUrlValid**(`value`): `boolean`
+
+Checks if a URL is valid.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `string` \| {} | The URL to validate. |
+
+#### Returns
+
+`boolean`
+
+A boolean indicating whether the URL is valid or not.
+
+#### Defined in
+
+[lib/utils/url-utils.ts:37](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/url-utils.ts#L37)
 
 ___
 
@@ -3229,7 +3508,7 @@ A promise that resolves to an array of the results.
 
 #### Defined in
 
-[lib/utils/async-utils.ts:88](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/async-utils.ts#L88)
+[lib/utils/async-utils.ts:88](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/async-utils.ts#L88)
 
 ___
 
@@ -3261,7 +3540,51 @@ Recursively maps the elements of an array or a nested array using a mapper funct
 
 #### Defined in
 
-[lib/utils/collection-utils/list-utils.ts:198](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/collection-utils/list-utils.ts#L198)
+[lib/utils/collection-utils/list-utils.ts:198](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/collection-utils/list-utils.ts#L198)
+
+___
+
+### mkDirIfNotExists
+
+▸ **mkDirIfNotExists**(`path`): `Promise`\<`void`\>
+
+Creates a directory if it does not already exist.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `path` | `string` | The path of the directory to create. |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[lib/utils/file-utils.ts:84](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/file-utils.ts#L84)
+
+___
+
+### mkDirIfNotExistsSync
+
+▸ **mkDirIfNotExistsSync**(`path`): `void`
+
+Creates a directory if it does not already exist.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `path` | `PathLike` | The path of the directory to create. |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[lib/utils/file-utils.ts:95](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/file-utils.ts#L95)
 
 ___
 
@@ -3285,7 +3608,7 @@ The negated boolean value.
 
 #### Defined in
 
-[lib/utils/bool-utils.ts:46](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/bool-utils.ts#L46)
+[lib/utils/bool-utils.ts:46](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/bool-utils.ts#L46)
 
 ___
 
@@ -3316,7 +3639,7 @@ Checks if a collection is non-empty.
 
 #### Defined in
 
-[lib/utils/collection-utils/list-utils.ts:176](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/collection-utils/list-utils.ts#L176)
+[lib/utils/collection-utils/list-utils.ts:176](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/collection-utils/list-utils.ts#L176)
 
 ___
 
@@ -3352,7 +3675,7 @@ T - The type of the value being wrapped.
 
 #### Defined in
 
-[lib/utils/optional-util.ts:162](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/optional-util.ts#L162)
+[lib/utils/optional-util.ts:162](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/optional-util.ts#L162)
 
 ___
 
@@ -3382,7 +3705,57 @@ A promise that resolves to an array of the results of the executed functions.
 
 #### Defined in
 
-[lib/utils/async-utils.ts:126](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/async-utils.ts#L126)
+[lib/utils/async-utils.ts:126](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/async-utils.ts#L126)
+
+___
+
+### pathAccess
+
+▸ **pathAccess**(`path`, `mode?`): `Promise`\<`boolean`\>
+
+Checks if a file or directory exists at the specified path.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `path` | `PathLike` | The path to check. |
+| `mode?` | `AccessMode` | The access mode to use (optional). |
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+A promise that resolves to `true` if the path exists and is accessible, or `false` otherwise.
+
+#### Defined in
+
+[lib/utils/file-utils.ts:53](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/file-utils.ts#L53)
+
+___
+
+### pathAccessSync
+
+▸ **pathAccessSync**(`path`, `mode?`): `boolean`
+
+Checks if a file or directory exists at the specified path.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `path` | `PathLike` | The path to check. |
+| `mode?` | `AccessMode` | The access mode to use for checking. Defaults to `fs.constants.F_OK`. |
+
+#### Returns
+
+`boolean`
+
+`true` if the file or directory exists, `false` otherwise.
+
+#### Defined in
+
+[lib/utils/file-utils.ts:70](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/file-utils.ts#L70)
 
 ___
 
@@ -3407,7 +3780,7 @@ The quoted string.
 
 #### Defined in
 
-[lib/utils/string-utils.ts:25](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/string-utils.ts#L25)
+[lib/utils/string-utils.ts:25](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/string-utils.ts#L25)
 
 ___
 
@@ -3443,7 +3816,7 @@ Retries the provided function a maximum number of times until it succeeds or the
 
 #### Defined in
 
-[lib/utils/async-utils.ts:63](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/async-utils.ts#L63)
+[lib/utils/async-utils.ts:63](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/async-utils.ts#L63)
 
 ___
 
@@ -3467,7 +3840,7 @@ A Promise that resolves after the specified time has elapsed.
 
 #### Defined in
 
-[lib/utils/async-utils.ts:32](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/async-utils.ts#L32)
+[lib/utils/async-utils.ts:32](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/async-utils.ts#L32)
 
 ___
 
@@ -3491,7 +3864,7 @@ The CSS variable.
 
 #### Defined in
 
-[lib/utils/browser/css-utils.ts:31](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/browser/css-utils.ts#L31)
+[lib/utils/browser/css-utils.ts:31](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/browser/css-utils.ts#L31)
 
 ___
 
@@ -3511,7 +3884,7 @@ ___
 
 #### Defined in
 
-[lib/utils/date-utils.ts:1](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/date-utils.ts#L1)
+[lib/utils/date-utils.ts:1](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/date-utils.ts#L1)
 
 ___
 
@@ -3536,7 +3909,7 @@ The URL object if the conversion is successful, otherwise undefined.
 
 #### Defined in
 
-[lib/utils/url-utils.ts:19](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/url-utils.ts#L19)
+[lib/utils/url-utils.ts:20](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/url-utils.ts#L20)
 
 ___
 
@@ -3569,7 +3942,7 @@ The transformed value if the original value is defined, otherwise undefined.
 
 #### Defined in
 
-[lib/utils/nullish-utils.ts:83](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/nullish-utils.ts#L83)
+[lib/utils/nullish-utils.ts:83](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/nullish-utils.ts#L83)
 
 ___
 
@@ -3593,4 +3966,4 @@ The converted string value, or an empty string if the value is undefined.
 
 #### Defined in
 
-[lib/utils/string-utils.ts:48](https://github.com/kacper-olszanski/only-utils/blob/63ac3e8606d9071290c2fb458e05cdcab9f2d355/lib/utils/string-utils.ts#L48)
+[lib/utils/string-utils.ts:48](https://github.com/kacper-olszanski/only-utils/blob/954ed7c460ae0e92926d4aaee29dd76070787160/lib/utils/string-utils.ts#L48)

@@ -80,6 +80,7 @@ export type {
   InstanceType,
   Mutable,
   Nested,
+  NotPromise,
   Prettify,
   PromiseOrAwaited,
   RecordKey,
