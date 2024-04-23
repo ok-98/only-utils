@@ -15,7 +15,7 @@ export default defineConfig({
   build: {
     lib: {
       name,
-      entry: [resolve(__dirname, 'lib/main.ts')],
+      entry: [resolve(__dirname, 'lib/only-utils.ts')],
       fileName: (format) =>
         format === 'es' ? `${name}.js` : `${name}.${format}.js`,
     },

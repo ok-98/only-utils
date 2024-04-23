@@ -1,5 +1,11 @@
 # only-utils
 
+## 0.4.7
+
+### Patch Changes
+
+- fixed type issue
+
 ## 0.4.6
 
 ### Patch Changes
