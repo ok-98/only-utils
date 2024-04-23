@@ -64,8 +64,8 @@ export type {
 } from './helpers/function-helpers.ts';
 export type {
   Nullish,
-  Optional,
   OptionalKeys,
+  Optional as OptionalT,
   RequiredKeys,
   TOrNull,
   TOrUndefined,

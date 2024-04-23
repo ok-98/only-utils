@@ -8,9 +8,12 @@ importers:
 
   .:
     dependencies:
+      better-optional:
+        specifier: ^1.0.1
+        version: 1.0.1
       boolchain:
-        specifier: latest
-        version: 0.2.4
+        specifier: ^0.3.0
+        version: 0.3.0
     devDependencies:
       '@changesets/cli':
         specifier: ^2.27.1
@@ -771,12 +774,16 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
+  better-optional@1.0.1:
+    resolution: {integrity: sha512-SxzxWG/nZxYGd1n+VjBT2O/EBAF6/NfdUM+0WNXKIcOl2Z9usi1P9Qm42cMlpqZPY1gtqg8IPFxWaWokWZC6qg==}
+    engines: {node: '>=18'}
+
   better-path-resolve@1.0.0:
     resolution: {integrity: sha512-pbnl5XzGBdrFU/wT4jqmJVPn2B6UHPBOhzMQkY/SPUPB6QtUXtmBHBIwCbXJol93mOpGMnQyP/+BB19q04xj7g==}
     engines: {node: '>=4'}
 
-  boolchain@0.2.4:
-    resolution: {integrity: sha512-ax55sfV2WyFqCJadQfrXbv/UqSaolsX/JWIRrt5q/j4hWQkTxrpLQrxEolWan6PSrC+aYdG7AmmrNaoAHN+AVg==}
+  boolchain@0.3.0:
+    resolution: {integrity: sha512-zuGerjW6Q2YE2Z8x+WPbw9S662jZ3Qp+JwCo7vBVENcyhtBLZUDiUtG6x4yPZQ4CMb4kghpshpNlFBfrl6dgsQ==}
     engines: {node: '>=18'}
 
   brace-expansion@1.1.11:
@@ -1718,6 +1725,10 @@ packages:
   onetime@6.0.0:
     resolution: {integrity: sha512-1FlR+gjXK7X+AsAHso35MnyN5KqGwJRi/31ft6x0M194ht7S+rWAvd7PHss9xSKMzE0asv1pyIHaJYq+BbacAQ==}
     engines: {node: '>=12'}
+
+  only-utils@0.4.5:
+    resolution: {integrity: sha512-GmCfKkuHyUX8o5JWosvdVfrh4S0WsagCxbZHTTYFyfTGjv4WaNHnUAupwDkOBamvUn4ia0mYrMlWTDR9lYSDOA==}
+    engines: {node: '>=18'}
 
   optionator@0.9.3:
     resolution: {integrity: sha512-JjCoypp+jKn1ttEFExxhetCKeJt9zhAgAve5FXHixTvFDW/5aEktX9bufBKLRRMdU7bNtpLfcGu94B3cdEJgjg==}
@@ -3261,11 +3272,16 @@ snapshots:
 
   balanced-match@1.0.2: {}
 
+  better-optional@1.0.1: {}
+
   better-path-resolve@1.0.0:
     dependencies:
       is-windows: 1.0.2
 
-  boolchain@0.2.4: {}
+  boolchain@0.3.0:
+    dependencies:
+      better-optional: 1.0.1
+      only-utils: 0.4.5
 
   brace-expansion@1.1.11:
     dependencies:
@@ -4294,6 +4310,10 @@ snapshots:
   onetime@6.0.0:
     dependencies:
       mimic-fn: 4.0.0
+
+  only-utils@0.4.5:
+    dependencies:
+      boolchain: 0.3.0
 
   optionator@0.9.3:
     dependencies:

@@ -1,6 +1,6 @@
 {
   "name": "only-utils",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "license": "MIT",
   "sideEffects": false,
   "description": "Only Nice Lean Yare - UTILS ...and some types",
@@ -9,13 +9,13 @@
     "url": "https://github.com/kacper-olszanski/only-utils.git"
   },
   "type": "module",
-  "main": "dist/main.umd.cjs",
-  "module": "dist/main.js",
-  "types": "dist/main.d.ts",
+  "main": "dist/only-utils.umd.js",
+  "module": "dist/only-utils.js",
+  "types": "dist/only-utils.d.ts",
   "exports": {
-    "types": "./dist/main.d.ts",
-    "import": "./dist/main.js",
-    "require": "./dist/main.umd.cjs"
+    "types": "./dist/only-utils.d.ts",
+    "import": "./dist/only-utils.js",
+    "require": "./dist/only-utils.umd.js"
   },
   "author": {
     "name": "Kacper Olszanski",
@@ -78,6 +78,7 @@
     "vitest": "^1.5.0"
   },
   "dependencies": {
-    "boolchain": "latest"
+    "better-optional": "^1.0.1",
+    "boolchain": "^0.3.0"
   }
 }

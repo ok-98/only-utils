@@ -25,6 +25,7 @@ export { isUrlValid, toUrl } from './url-utils.js';
 export * from './browser/index.js';
 export * from './collection-utils/index.js';
 
+export * from 'better-optional';
 export * from 'boolchain';
 
 export { EMPTY_ARRAY, EMPTY_OBJECT } from './const-utils.js';
@@ -41,9 +42,6 @@ export {
   quote,
   undefinedToEmptyString,
 } from './string-utils.js';
-
-export { optional } from './optional-util.js';
-export type { OptionalValue } from './optional-util.js';
 
 export {
   alwaysFalse,

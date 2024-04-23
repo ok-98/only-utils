@@ -1,5 +1,11 @@
 # only-utils
 
+## 0.4.6
+
+### Patch Changes
+
+- extracted optional to better-optional library
+
 ## 0.4.5
 
 ### Patch Changes

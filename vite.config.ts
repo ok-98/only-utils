@@ -2,6 +2,8 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 
+const name = 'only-utils';
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -12,14 +14,16 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      fileName: 'main',
-      name: 'only-utils',
+      name,
       entry: [resolve(__dirname, 'lib/main.ts')],
+      fileName: (format) =>
+        format === 'es' ? `${name}.js` : `${name}.${format}.js`,
     },
     rollupOptions: {
       external: ['url', 'fs', 'fs/promises'],
       output: {
         exports: 'named',
+        name: 'onlyUtils',
       },
     },
   },
