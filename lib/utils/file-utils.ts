@@ -1,6 +1,6 @@
-import { and, andAsync } from 'boolchain';
+import { and, andAsync } from 'boolchain/nodeps';
 import type { PathLike } from 'fs';
-import { Optional } from '../types/helpers/nullish-helpers.js';
+import { OptionalT } from '../only-utils.ts';
 
 const fs = () => require('fs');
 const fsAsync = () => require('fs/promises');
@@ -28,7 +28,7 @@ type AccessMode = 'visible' | 'readable' | 'writable' | 'executable';
  * @param mode - The access mode string. Can be one of 'visible', 'readable', 'writable', or 'executable'.
  * @returns The numeric value corresponding to the access mode string, or undefined if the mode is invalid.
  */
-const accesModeToNumber = (mode: Optional<AccessMode>) => {
+const accesModeToNumber = (mode: OptionalT<AccessMode>) => {
   const { constants } = fs();
   switch (mode) {
     case 'visible':

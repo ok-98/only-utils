@@ -1,4 +1,4 @@
-import { not } from 'boolchain';
+import { not } from 'boolchain/nodeps';
 import { SimpleFunction } from '../types/helpers/function-helpers.ts';
 import {
   Nullish,

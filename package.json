@@ -1,6 +1,6 @@
 {
   "name": "only-utils",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "license": "MIT",
   "sideEffects": false,
   "description": "Only Nice Lean Yare - UTILS ...and some types",
@@ -57,8 +57,8 @@
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
     "@types/node": "^20.12.7",
-    "@typescript-eslint/eslint-plugin": "^7.7.0",
-    "@typescript-eslint/parser": "^7.7.0",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1",
     "@vitest/coverage-v8": "^1.5.0",
     "agadoo": "^3.0.0",
     "eslint": "8.57.0",
@@ -73,12 +73,12 @@
     "typedoc": "^0.25.13",
     "typedoc-plugin-markdown": "^3.17.1",
     "typescript": "^5.4.5",
-    "vite": "^5.2.9",
-    "vite-plugin-dts": "^3.8.3",
+    "vite": "^5.2.10",
+    "vite-plugin-dts": "^3.9.0",
     "vitest": "^1.5.0"
   },
   "dependencies": {
-    "better-optional": "^1.0.1",
-    "boolchain": "^0.3.0"
+    "better-optional": "^1.0.2",
+    "boolchain": "0.3.1"
   }
 }

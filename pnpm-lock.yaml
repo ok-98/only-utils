@@ -6,11 +6,11 @@ settings:
 
 dependencies:
   better-optional:
-    specifier: ^1.0.1
-    version: 1.0.1
+    specifier: ^1.0.2
+    version: 1.0.2
   boolchain:
-    specifier: ^0.3.0
-    version: 0.3.0
+    specifier: 0.3.1
+    version: 0.3.1(better-optional@1.0.2)(only-utils@0.4.7)
 
 devDependencies:
   '@changesets/cli':
@@ -20,10 +20,10 @@ devDependencies:
     specifier: ^20.12.7
     version: 20.12.7
   '@typescript-eslint/eslint-plugin':
-    specifier: ^7.7.0
+    specifier: ^7.7.1
     version: 7.7.1(@typescript-eslint/parser@7.7.1)(eslint@8.57.0)(typescript@5.4.5)
   '@typescript-eslint/parser':
-    specifier: ^7.7.0
+    specifier: ^7.7.1
     version: 7.7.1(eslint@8.57.0)(typescript@5.4.5)
   '@vitest/coverage-v8':
     specifier: ^1.5.0
@@ -68,10 +68,10 @@ devDependencies:
     specifier: ^5.4.5
     version: 5.4.5
   vite:
-    specifier: ^5.2.9
+    specifier: ^5.2.10
     version: 5.2.10(@types/node@20.12.7)
   vite-plugin-dts:
-    specifier: ^3.8.3
+    specifier: ^3.9.0
     version: 3.9.0(@types/node@20.12.7)(typescript@5.4.5)(vite@5.2.10)
   vitest:
     specifier: ^1.5.0
@@ -1411,8 +1411,8 @@ packages:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
     dev: true
 
-  /better-optional@1.0.1:
-    resolution: {integrity: sha512-SxzxWG/nZxYGd1n+VjBT2O/EBAF6/NfdUM+0WNXKIcOl2Z9usi1P9Qm42cMlpqZPY1gtqg8IPFxWaWokWZC6qg==}
+  /better-optional@1.0.2:
+    resolution: {integrity: sha512-lqjjyVSby90bMELiCYUHSII1CIZc3ryNb0IPi66B827Dn3r4ytaHJ/+QkJh81YpKH3e1hWwZ36QQO+IGpjqJSQ==}
     engines: {node: '>=18'}
     dev: false
 
@@ -1423,12 +1423,15 @@ packages:
       is-windows: 1.0.2
     dev: true
 
-  /boolchain@0.3.0:
-    resolution: {integrity: sha512-zuGerjW6Q2YE2Z8x+WPbw9S662jZ3Qp+JwCo7vBVENcyhtBLZUDiUtG6x4yPZQ4CMb4kghpshpNlFBfrl6dgsQ==}
+  /boolchain@0.3.1(better-optional@1.0.2)(only-utils@0.4.7):
+    resolution: {integrity: sha512-Cd3XYXvdf+9YwEDr9McYCNoCC/eaRqA/EajvqJ5a1e4+lHyouE/E1rWm5AzQkbLp0flo/LEu2bDZ+mfP9/VaZA==}
     engines: {node: '>=18'}
+    peerDependencies:
+      better-optional: '>=1.0.1'
+      only-utils: '>=0.4.7'
     dependencies:
-      better-optional: 1.0.1
-      only-utils: 0.4.6
+      better-optional: 1.0.2
+      only-utils: 0.4.7
     dev: false
 
   /brace-expansion@1.1.11:
@@ -3102,12 +3105,12 @@ packages:
       mimic-fn: 4.0.0
     dev: true
 
-  /only-utils@0.4.6:
-    resolution: {integrity: sha512-EZR55AxxVmelJQxe8ACRPeC3XDCMnbV9VhIcxgyRL8HUmTEzn0ZiC16JoRpaZFxT8usUB6cbR/ScBXjh2D4sdw==}
+  /only-utils@0.4.7:
+    resolution: {integrity: sha512-g0oFjLOtWt5+iprIOc2P4q8w0QUr55kiDQDgSaZ+stIA/vd8+kcqI1BYlG5yLHIQJFkddsRv8bCgQqMSTp75NA==}
     engines: {node: '>=18'}
     dependencies:
-      better-optional: 1.0.1
-      boolchain: 0.3.0
+      better-optional: 1.0.2
+      boolchain: 0.3.1(better-optional@1.0.2)(only-utils@0.4.7)
     dev: false
 
   /optionator@0.9.3:

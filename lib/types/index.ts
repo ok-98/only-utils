@@ -95,3 +95,5 @@ export type {
   SingleNumber,
   SingleNumberString,
 } from './helpers/string-helpers.ts';
+
+export type { OptionalValue } from 'better-optional';

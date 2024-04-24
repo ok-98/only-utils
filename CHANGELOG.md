@@ -1,5 +1,11 @@
 # only-utils
 
+## 0.4.8
+
+### Patch Changes
+
+- minimized bundle size
+
 ## 0.4.7
 
 ### Patch Changes
