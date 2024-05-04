@@ -1,4 +1,6 @@
-only-utils / [Exports](modules.md)
+**only-utils** • [**Docs**](globals.md)
+
+***
 
 # only-utils
 

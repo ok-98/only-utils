@@ -1,5 +1,14 @@
 # only-utils
 
+## 0.4.9
+
+### Patch Changes
+
+- added some number utils
+- object utils for removing functions of object or leaving only functions in object
+- added array for each utils
+- added device utils
+
 ## 0.4.8
 
 ### Patch Changes

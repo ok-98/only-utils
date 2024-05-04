@@ -295,12 +295,79 @@ export const hasApproximately = <T>(
   approxRange: number,
 ) => hasBetween(value, [x - approxRange, x + approxRange], 'including');
 
+type ResolveType = 'all' | 'allSettled';
+const promiseResolver: Record<ResolveType, typeof Promise.all> = {
+  all: Promise.all,
+  allSettled: Promise.allSettled,
+};
+
+/**
+ * Asynchronously iterates over an array and executes a callback function for each item.
+ * @param array - The array to iterate over.
+ * @param callback - The callback function to execute for each item.
+ * @param resolveType - The type of promise resolution. Defaults to 'all'.
+ * @returns A promise that resolves to an array of void results.
+ */
 export const asyncForEach = async <T>(
   array: T[],
   callback: Promisify<(item: T, index: number, array: T[]) => void>,
-): Promise<void> => {
+  resolveType: 'all' | 'allSettled' = 'all',
+): Promise<void[]> =>
+  promiseResolver[resolveType]!(
+    array.map((item, index) => callback(item, index, array)),
+  );
+
+/**
+ * Asynchronously maps an array using a callback function.
+ *
+ * @template T - The type of the elements in the input array.
+ * @template R - The type of the elements in the resulting array.
+ * @param {T[]} array - The input array to be mapped.
+ * @param {Promisify<(item: T, index: number, array: T[]) => R>} callback - The callback function to be applied to each element in the array.
+ * @param {'all' | 'allSettled'} [resolveType='all'] - The type of resolution for the promises returned by the callback function.
+ * @returns {Promise<R[]>} - A promise that resolves to the resulting array after applying the callback function to each element.
+ */
+export const asyncMap = async <T, R>(
+  array: T[],
+  callback: Promisify<(item: T, index: number, array: T[]) => R>,
+  resolveType: 'all' | 'allSettled' = 'all',
+): Promise<R[]> =>
+  promiseResolver[resolveType](
+    array.map((item, index) => callback(item, index, array)),
+  );
+
+/**
+ * Asynchronously iterates over an array and yields the result of each iteration.
+ * @template T - The type of elements in the array.
+ * @template R - The type of the result yielded by the callback function.
+ * @param {T[]} array - The array to iterate over.
+ * @param {Promisify<(item: T, index: number, array: T[]) => R>} callback - The callback function to execute for each element.
+ * @returns {AsyncGenerator<R, void, unknown>} An async generator that yields the result of each iteration.
+ */
+export const asyncForEachGenerator = async function* <T, R = void>(
+  array: T[],
+  callback: Promisify<(item: T, index: number, array: T[]) => R>,
+) {
   for (let index = 0; index < array.length; index++) {
-    await callback(array[index], index, array);
+    yield await callback(array[index], index, array);
+  }
+};
+
+/**
+ * Executes a callback function for each element in an array using a generator.
+ *
+ * @template T - The type of elements in the array.
+ * @template R - The return type of the callback function.
+ * @param {T[]} array - The array to iterate over.
+ * @param {(item: T, index: number, array: T[]) => R} callback - The callback function to execute for each element.
+ * @returns {Generator<R, void, unknown>} - A generator that yields the results of the callback function.
+ */
+export const forEachGenerator = function* <T, R = void>(
+  array: T[],
+  callback: (item: T, index: number, array: T[]) => R,
+) {
+  for (let index = 0; index < array.length; index++) {
+    yield callback(array[index], index, array);
   }
 };
 

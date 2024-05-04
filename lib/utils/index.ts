@@ -1,4 +1,14 @@
-export { isNegative, isPositive } from './number-utils.js';
+export {
+  isEven,
+  isFiniteNumber,
+  isNegative,
+  isNumber,
+  isOdd,
+  isPositive,
+  isPositiveExcludingZero,
+  isPositiveIncludingZero,
+  isZero,
+} from './number-utils.js';
 export {
   areEqual,
   asType,
@@ -52,6 +62,7 @@ export {
   braceYourself,
   emptyStringToUndefined,
   quote,
+  replaceTabs,
   undefinedToEmptyString,
 } from './string-utils.js';
 

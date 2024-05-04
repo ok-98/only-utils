@@ -86,6 +86,8 @@ export type {
   RecordKey,
   RecordKeyValue,
   RecordValue,
+  RemoveFunctions,
+  RemoveValues,
 } from './helpers/type-helpers.ts';
 
 export type {

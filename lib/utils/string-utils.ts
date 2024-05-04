@@ -46,3 +46,15 @@ export const emptyStringToUndefined = (
  * @returns The converted string value, or an empty string if the value is undefined.
  */
 export const undefinedToEmptyString = (value: Optional<string>) => value ?? '';
+
+/**
+ * Replaces all occurrences of tabs in a string with a specified number of spaces.
+ *
+ * @param value - The string to be processed.
+ * @param numberOfSpaces - The number of spaces to replace each tab with. Defaults to 1.
+ * @returns The modified string with tabs replaced by spaces.
+ */
+export const replaceTabs = (
+  value: string,
+  numberOfSpaces: number = 1,
+): string => value.replace(/\t/g, ' '.repeat(numberOfSpaces));

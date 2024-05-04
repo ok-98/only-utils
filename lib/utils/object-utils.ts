@@ -1,6 +1,12 @@
 import { isEqual } from '../generic-utils/generic-utils.js';
 import { ArrayWithAtLeast2 } from '../types/helpers/collection-helpers.js';
-import { AnyFunction, Primitive, PrimitiveNullish } from '../types/index.js';
+import {
+  Primitive,
+  PrimitiveNullish,
+  RemoveFunctions,
+  RemoveValues,
+  SimpleFunction,
+} from '../types/index.js';
 import { filterNullishArray } from './collection-utils/list-utils.ts';
 import { EMPTY_OBJECT } from './const-utils.ts';
 import { isNotDefined } from './nullish-utils.js';
@@ -100,5 +106,25 @@ export const asType = <T>(value: unknown): T => value as T;
  */
 export const isType = <T>(
   value: unknown,
-  typeChecker: AnyFunction<boolean>,
+  typeChecker: SimpleFunction<unknown, boolean>,
 ): value is T => typeChecker(value);
+
+export const removeFunctions = <T>(obj: T): RemoveFunctions<T> => {
+  const result = {} as RemoveFunctions<T>;
+  for (const key in obj) {
+    if (typeof obj[key] !== 'function') {
+      result[key] = obj[key] as RemoveFunctions<T>[Extract<keyof T, string>];
+    }
+  }
+  return result;
+};
+
+export const removeObjects = <T>(obj: T): RemoveValues<T> => {
+  const result = {} as RemoveValues<T>;
+  for (const key in obj) {
+    if (typeof obj[key] === 'function') {
+      result[key] = obj[key] as RemoveValues<T>[Extract<keyof T, string>];
+    }
+  }
+  return result;
+};

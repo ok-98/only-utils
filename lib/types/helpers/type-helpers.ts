@@ -87,3 +87,20 @@ export type DeepReadonly<T> = Readonly<{
  * @returns The type without the promise.
  */
 export type NotPromise<T> = T extends Promise<T> ? never : T;
+
+/**
+ * Extracts the function types from a record type.
+ * @template R - The record type.
+ * @returns The function types of the record.
+ */
+export type RemoveValues<R> = {
+  [K in keyof R]: R[K] extends (...args: any[]) => any ? R[K] : never;
+};
+
+/**
+ * Removes all functions from the values of an object type.
+ * @template T - The object type.
+ */
+export type RemoveFunctions<T> = {
+  [K in keyof T]: T[K] extends (...args: any[]) => any ? never : T[K];
+};
