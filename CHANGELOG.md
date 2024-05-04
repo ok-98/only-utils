@@ -1,6 +1,6 @@
 # only-utils
 
-## 0.4.10
+## 0.4.11
 
 ### Patch Changes
 
@@ -63,7 +63,7 @@
 
 ### Patch Changes
 
-- extracted boolean chaining functions to boolchain: https://github.com/kacper-olszanski/boolchain.js
+- extracted boolean chaining functions to boolchain: <https://github.com/kacper-olszanski/boolchain.js>
 
 ## 0.3.5
 

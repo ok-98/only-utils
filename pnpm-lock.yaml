@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       better-optional:
-        specifier: ^1.0.4
-        version: 1.0.4(errors-es@0.1.3)
+        specifier: ^1.0.6
+        version: 1.0.6(errors-es@0.1.3)
       boolchain:
-        specifier: 0.3.2
-        version: 0.3.2(better-optional@1.0.4(errors-es@0.1.3))(only-utils@0.4.9)
+        specifier: ^0.3.3
+        version: 0.3.3(better-optional@1.0.6(errors-es@0.1.3))(only-utils@0.4.11)
       errors-es:
         specifier: ^0.1.3
         version: 0.1.3
@@ -773,8 +773,8 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
-  better-optional@1.0.4:
-    resolution: {integrity: sha512-IzE77v8APM2JnG7ZjCuVr5eHbIBKklbNY/msfnGXln9A1h28xsCY+BwOMIKfm9B5trX6u7FYVOJRHPCR+/vizA==}
+  better-optional@1.0.6:
+    resolution: {integrity: sha512-WGi1a9PIb3jswqUx8EJXHJHTDwBeb2TsoJ9QAkQ+MnPLruyLJPtGcXreoMMjDadUCJ4yUYuuMFA4A8DGPtRJ6A==}
     engines: {node: '>=18'}
     peerDependencies:
       errors-es: '>=0.1.3'
@@ -789,6 +789,13 @@ packages:
     peerDependencies:
       better-optional: '>=1.0.3'
       only-utils: '>=0.4.8'
+
+  boolchain@0.3.3:
+    resolution: {integrity: sha512-wma1j82neiceifn57IvvAWjut1HwWqQ4yGvKFUmrd3cnRIrH46kBypymdid1948Yt38YvcXoNs6EDdGOPkOZuA==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      better-optional: '>=1.0.6'
+      only-utils: '>=0.4.11'
 
   brace-expansion@1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
@@ -1722,8 +1729,8 @@ packages:
     resolution: {integrity: sha512-1FlR+gjXK7X+AsAHso35MnyN5KqGwJRi/31ft6x0M194ht7S+rWAvd7PHss9xSKMzE0asv1pyIHaJYq+BbacAQ==}
     engines: {node: '>=12'}
 
-  only-utils@0.4.9:
-    resolution: {integrity: sha512-+MuxtexMB4oycWXTcg+cBH+cws+PKUZI5+LHndcqPuzDWiYwJ/+09APgne29cWLjL+Cnle+BYArBMxuORFpSXw==}
+  only-utils@0.4.11:
+    resolution: {integrity: sha512-a6CHgesY+y9necmD4/DbOYwupdnHcDnTvvVqKZnceDxf75aGOMk5G7cIxHoWi62vNQ+J/uxE8nOBnUI26ZEcpg==}
     engines: {node: '>=18'}
 
   optionator@0.9.4:
@@ -3262,7 +3269,7 @@ snapshots:
 
   balanced-match@1.0.2: {}
 
-  better-optional@1.0.4(errors-es@0.1.3):
+  better-optional@1.0.6(errors-es@0.1.3):
     dependencies:
       errors-es: 0.1.3
 
@@ -3270,10 +3277,15 @@ snapshots:
     dependencies:
       is-windows: 1.0.2
 
-  boolchain@0.3.2(better-optional@1.0.4(errors-es@0.1.3))(only-utils@0.4.9):
+  boolchain@0.3.2(better-optional@1.0.6(errors-es@0.1.3))(only-utils@0.4.11):
     dependencies:
-      better-optional: 1.0.4(errors-es@0.1.3)
-      only-utils: 0.4.9
+      better-optional: 1.0.6(errors-es@0.1.3)
+      only-utils: 0.4.11
+
+  boolchain@0.3.3(better-optional@1.0.6(errors-es@0.1.3))(only-utils@0.4.11):
+    dependencies:
+      better-optional: 1.0.6(errors-es@0.1.3)
+      only-utils: 0.4.11
 
   brace-expansion@1.1.11:
     dependencies:
@@ -4293,10 +4305,10 @@ snapshots:
     dependencies:
       mimic-fn: 4.0.0
 
-  only-utils@0.4.9:
+  only-utils@0.4.11:
     dependencies:
-      better-optional: 1.0.4(errors-es@0.1.3)
-      boolchain: 0.3.2(better-optional@1.0.4(errors-es@0.1.3))(only-utils@0.4.9)
+      better-optional: 1.0.6(errors-es@0.1.3)
+      boolchain: 0.3.2(better-optional@1.0.6(errors-es@0.1.3))(only-utils@0.4.11)
       errors-es: 0.1.3
 
   optionator@0.9.4:

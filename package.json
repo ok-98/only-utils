@@ -1,6 +1,6 @@
 {
   "name": "only-utils",
-  "version": "0.4.10",
+  "version": "0.4.12",
   "license": "MIT",
   "sideEffects": false,
   "description": "Only Nice Lean Yare - UTILS ...and some types",
@@ -78,8 +78,19 @@
     "vitest": "^1.6.0"
   },
   "dependencies": {
-    "better-optional": "^1.0.4",
-    "boolchain": "0.3.2",
+    "better-optional": "^1.0.6",
+    "boolchain": "^0.3.3",
     "errors-es": "^0.1.3"
+  },
+  "overrides": {
+    "better-optional": {
+      ".": "1.0.6",
+      "only-utils": "0.4.12"
+    },
+    "boolchain": {
+      ".": "0.3.3",
+      "better-optional": "1.0.6",
+      "only-utils": "0.4.12"
+    }
   }
 }
