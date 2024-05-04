@@ -35,7 +35,7 @@ export { isUrlValid, toUrl } from './url-utils.js';
 export * from './browser/index.js';
 export * from './collection-utils/index.js';
 
-export { Optional } from 'better-optional';
+export { Optional } from 'better-optional/nodeps';
 export {
   and,
   andAsync,

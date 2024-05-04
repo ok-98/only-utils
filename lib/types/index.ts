@@ -98,4 +98,4 @@ export type {
   SingleNumberString,
 } from './helpers/string-helpers.ts';
 
-export type { OptionalValue } from 'better-optional';
+export type { OptionalValue } from 'better-optional/nodeps';
