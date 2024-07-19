@@ -2,8 +2,9 @@ import { and, andAsync } from 'boolchain/nodeps';
 import type { PathLike } from 'fs';
 import { OptionalT } from '../only-utils.ts';
 
-const fs = () => require('fs');
-const fsAsync = () => require('fs/promises');
+const fs = () => (require ? require('fs') : import('fs'));
+const fsAsync = async () =>
+  require ? require('fs/promises') : await import('fs/promises');
 
 export const fileExtists = async (path: PathLike) =>
   await andAsync(pathAccess, isFile)(path);
@@ -51,7 +52,7 @@ const accesModeToNumber = (mode: OptionalT<AccessMode>) => {
  * @returns A promise that resolves to `true` if the path exists and is accessible, or `false` otherwise.
  */
 export const pathAccess = async (path: PathLike, mode?: AccessMode) => {
-  const { access } = fsAsync();
+  const { access } = await fsAsync();
   try {
     await access(path, accesModeToNumber(mode));
     return true;
@@ -82,7 +83,7 @@ export const pathAccessSync = (path: PathLike, mode?: AccessMode) => {
  * @param path - The path of the directory to create.
  */
 export const mkDirIfNotExists = async (path: string) => {
-  const { mkdir } = fsAsync();
+  const { mkdir } = await fsAsync();
   if (!(await pathAccess(path))) {
     await mkdir(path);
   }
@@ -104,7 +105,7 @@ export const mkDirIfNotExistsSync = (path: PathLike) => {
  * @param filePath - The path of the file to check.
  */
 export const getFileSize = async (filePath: PathLike) => {
-  const { stat } = fsAsync();
+  const { stat } = await fsAsync();
   const stats = await stat(filePath);
   return stats.size;
 };
@@ -125,7 +126,7 @@ export const getFileSizeSync = (filePath: PathLike) => {
  * @returns `true` if the path is a directory, `false` otherwise.
  */
 export const isDirectory = async (path: PathLike) => {
-  const { stat } = fsAsync();
+  const { stat } = await fsAsync();
   const stats = await stat(path);
   return stats.isDirectory();
 };
@@ -148,7 +149,7 @@ export const isDirectorySync = (path: PathLike) => {
  * @returns `true` if the path is a file, `false` otherwise.
  */
 export const isFile = async (path: PathLike) => {
-  const { stat } = fsAsync();
+  const { stat } = await fsAsync();
   const stats = await stat(path);
   return stats.isFile();
 };

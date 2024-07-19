@@ -1,5 +1,11 @@
 # only-utils
 
+## 0.4.15
+
+### Patch Changes
+
+- minor updates
+
 ## 0.4.14
 
 ### Patch Changes
