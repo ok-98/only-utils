@@ -2,9 +2,8 @@ import { and, andAsync } from 'boolchain/nodeps';
 import type { PathLike } from 'fs';
 import { OptionalT } from '../only-utils.ts';
 
-const fs = () => (require ? require('fs') : import('fs'));
-const fsAsync = async () =>
-  require ? require('fs/promises') : await import('fs/promises');
+const fs = () => require('fs');
+const fsAsync = async () => require('fs/promises');
 
 export const fileExtists = async (path: PathLike) =>
   await andAsync(pathAccess, isFile)(path);
