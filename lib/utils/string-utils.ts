@@ -1,5 +1,9 @@
-import { Optional, TOrUndefined } from '../types/helpers/nullish-helpers.js';
-import { Braces, Quotation } from '../types/helpers/string-helpers.js';
+import {
+  Braces,
+  OptionalT as Optional,
+  Quotation,
+  TOrUndefined,
+} from 'only-types';
 import { isDefined } from './nullish-utils.js';
 
 /**

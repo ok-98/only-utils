@@ -1,12 +1,12 @@
-import { isEqual } from '../generic-utils/generic-utils.js';
-import { ArrayWithAtLeast2 } from '../types/helpers/collection-helpers.js';
 import {
+  ArrayWithAtLeast2,
   Primitive,
   PrimitiveNullish,
   RemoveFunctions,
   RemoveValues,
   SimpleFunction,
-} from '../types/index.js';
+} from 'only-types';
+import { isEqual } from '../generic-utils/generic-utils.js';
 import { filterNullishArray } from './collection-utils/list-utils.ts';
 import { EMPTY_OBJECT } from './const-utils.ts';
 import { isNotDefined } from './nullish-utils.js';

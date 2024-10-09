@@ -1,5 +1,4 @@
-import { TOrUndefined } from '../../only-utils.ts';
-import { CssVar, CssVarName } from '../../types/helpers/browser-helpers.ts';
+import { CssVar, CssVarName, TOrUndefined } from 'only-types';
 import { areNotDefined, isNotDefined } from '../nullish-utils.js';
 
 const isCssVarName = (value: string): value is CssVarName =>

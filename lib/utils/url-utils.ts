@@ -1,6 +1,5 @@
+import { CtorParam1, CtorParam2, TOrUndefined } from 'only-types';
 import type { URL } from 'url';
-import { CtorParam1, CtorParam2 } from '../types/helpers/function-helpers.js';
-import { TOrUndefined } from '../types/helpers/nullish-helpers.ts';
 import { isDefined } from './nullish-utils.ts';
 
 const requireURL = (

@@ -1,5 +1,5 @@
+import { CssVar } from 'only-types';
 import { describe, expect, it } from 'vitest';
-import { CssVar } from '../../types/helpers/browser-helpers.ts';
 import { getCssVariableName, toCssVar } from './css-utils.ts';
 
 describe('css-utils', () => {

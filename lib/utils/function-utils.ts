@@ -1,4 +1,4 @@
-import { ParamArgs } from '../types/helpers/function-helpers.js';
+import { ParamArgs } from 'only-types';
 
 /**
  * An empty arrow function that takes any number of arguments and returns void.

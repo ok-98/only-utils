@@ -5,18 +5,16 @@ import {
   isString,
 } from '../../generic-utils/index.ts';
 
-import {
+import type {
   ArrayLike,
   CollectionLike,
-  RecursiveArray,
-  type SetLike,
-} from '../../types/helpers/collection-helpers.ts';
-import {
+  OptionalT as Optional,
   Promisify,
+  RecursiveArray,
+  SetLike,
   SimpleFunction,
-} from '../../types/helpers/function-helpers.ts';
-import { TOrUndefined } from '../../types/helpers/nullish-helpers';
-import { Optional } from '../../types/helpers/nullish-helpers.ts';
+  TOrUndefined,
+} from 'only-types';
 import { EMPTY_OBJECT } from '../const-utils.ts';
 import { EMPTY_ARROW_FUNCTION } from '../function-utils.ts';
 import { isDefined } from '../nullish-utils.ts';

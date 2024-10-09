@@ -95,7 +95,7 @@ export const mkDirIfNotExists = async (path: string): Promise<void> => {
  * Creates a directory if it does not already exist.
  * @param path - The path of the directory to create.
  */
-export const mkDirIfNotExistsSync = (path: PathLike): boolean => {
+export const mkDirIfNotExistsSync = (path: PathLike): void => {
   const { mkdirSync } = fs();
   if (!pathAccessSync(path)) {
     mkdirSync(path);

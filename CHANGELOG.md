@@ -1,5 +1,12 @@
 # only-utils
 
+## 0.4.18
+
+### Patch Changes
+
+- added jsr compatibility
+- extracted types to only-types
+
 ## 0.4.16
 
 ### Patch Changes

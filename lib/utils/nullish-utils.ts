@@ -1,11 +1,11 @@
 import { not } from 'boolchain/nodeps';
-import { SimpleFunction } from '../types/helpers/function-helpers.ts';
 import {
   Nullish,
-  Optional,
+  OptionalT as Optional,
+  SimpleFunction,
   TOrNull,
   TOrUndefined,
-} from '../types/helpers/nullish-helpers.ts';
+} from 'only-types';
 
 /**
  * Checks if a value is defined (not null or undefined).
