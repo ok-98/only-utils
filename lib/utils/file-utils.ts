@@ -1,6 +1,6 @@
 import { and, andAsync } from 'boolchain/nodeps';
 import type { PathLike } from 'node:fs';
-import { OptionalT } from '../only-utils.ts';
+import { OptionalT } from 'only-types';
 
 const fs = () => require('fs');
 const fsAsync = async () => require('fs/promises');

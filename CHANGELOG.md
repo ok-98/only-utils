@@ -1,5 +1,11 @@
 # only-utils
 
+## 0.5.0
+
+### Minor Changes
+
+- removed reexported only-types
+
 ## 0.4.18
 
 ### Patch Changes
