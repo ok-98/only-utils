@@ -28,7 +28,7 @@ export const hasKey = <T extends object>(obj: T, key: any): key is keyof T =>
  * @param value - The object to check.
  * @returns True if the object is empty, false otherwise.
  */
-export const isEmptyObject = <T extends object>(value: T) =>
+export const isEmptyObject = <T extends object>(value: T): boolean =>
   isEqual(value, EMPTY_OBJECT) ||
   filterNullishArray(Object.values(value)).length === 0;
 

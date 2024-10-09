@@ -1,4 +1,3 @@
-import { ArgumentsError } from 'errors-es';
 import { RemoveFunctions } from '../../only-utils.ts';
 import { removeFunctions } from '../object-utils.ts';
 
@@ -18,7 +17,7 @@ export type MobileDevice =
 const _isMobile = (userAgentString?: string): MobileDevice | false => {
   const userAgent = userAgentString || navigator?.userAgent;
   if (!userAgent) {
-    throw new ArgumentsError(
+    throw new Error(
       'Either provide the user agent string or run this code in a browser environment. ',
     );
   }

@@ -15,6 +15,7 @@ import {
   Promisify,
   SimpleFunction,
 } from '../../types/helpers/function-helpers.ts';
+import { TOrUndefined } from '../../types/helpers/nullish-helpers';
 import { Optional } from '../../types/helpers/nullish-helpers.ts';
 import { EMPTY_OBJECT } from '../const-utils.ts';
 import { EMPTY_ARROW_FUNCTION } from '../function-utils.ts';
@@ -89,8 +90,9 @@ export const asArray = <Value, Key = unknown>(
  * @param value - The array-like object to filter.
  * @returns A new array containing only the non-nullish values.
  */
-export const filterNullishArray = <Value>(value: ArrayLike<Optional<Value>>) =>
-  _asArray(value, true).filter(isDefined);
+export const filterNullishArray = <Value>(
+  value: ArrayLike<Optional<Value>>,
+): ArrayLike<Optional<Value>> => _asArray(value, true).filter(isDefined);
 
 /**
  * Filters out nullish values from a Set-like collection.
@@ -99,7 +101,9 @@ export const filterNullishArray = <Value>(value: ArrayLike<Optional<Value>>) =>
  * @param value - The Set-like collection to filter.
  * @returns A new Set containing only the non-nullish values from the input collection.
  */
-export const filterNullishSet = <Value>(value: SetLike<Optional<Value>>) => {
+export const filterNullishSet = <Value>(
+  value: SetLike<Optional<Value>>,
+): SetLike<Optional<Value>> => {
   const collection = new Set<Value>();
 
   if (isDefined(value)) {
@@ -127,7 +131,7 @@ export const filterNullishSet = <Value>(value: SetLike<Optional<Value>>) => {
  */
 export const filterNullishMap = <Key, Value>(
   value: Map<Key, Optional<Value>>,
-) => {
+): Map<Key, Optional<Value>> => {
   const collection = new Map<Key, Value>();
 
   if (isDefined(value)) {
@@ -183,8 +187,9 @@ export const nonEmpty = <Value, Key = unknown>(
  * @param value - The list to convert.
  * @returns The converted list, or undefined if the list is empty.
  */
-export const emptyListToUndefined = <Value>(value: CollectionLike<Value>) =>
-  isEmpty(value) ? undefined : value;
+export const emptyListToUndefined = <Value>(
+  value: CollectionLike<Value>,
+): TOrUndefined<CollectionLike<Value>> => (isEmpty(value) ? undefined : value);
 
 /**
  * Recursively maps the elements of an array or a nested array using a mapper function.
@@ -223,7 +228,7 @@ export const hasMoreThan = <T>(
   value: CollectionLike<T>,
   x: number,
   equals: boolean = false,
-) =>
+): boolean =>
   equals ? _asArray(value, true).length >= x : _asArray(value, true).length > x;
 
 /**
@@ -239,7 +244,7 @@ export const hasLessThan = <T>(
   value: CollectionLike<T>,
   x: number,
   equals: boolean = false,
-) =>
+): boolean =>
   equals ? _asArray(value, true).length <= x : _asArray(value, true).length < x;
 
 /**
@@ -250,7 +255,7 @@ export const hasLessThan = <T>(
  * @param x - The number of elements to check for.
  * @returns `true` if the collection has exactly `x` elements, `false` otherwise.
  */
-export const hasExactly = <T>(value: CollectionLike<T>, x: number) =>
+export const hasExactly = <T>(value: CollectionLike<T>, x: number): boolean =>
   _asArray(value, true).length === x;
 
 /**
@@ -264,7 +269,7 @@ export const hasBetween = <T>(
   value: CollectionLike<T>,
   range: [number, number],
   matchType?: 'including' | 'excluding',
-) => {
+): boolean => {
   const arr = _asArray(value, true);
   const [start, end] = range.map((num) =>
     isFinite(num) && isPositive(num) ? num : 0,
@@ -293,7 +298,8 @@ export const hasApproximately = <T>(
   value: CollectionLike<T>,
   x: number,
   approxRange: number,
-) => hasBetween(value, [x - approxRange, x + approxRange], 'including');
+): boolean =>
+  hasBetween(value, [x - approxRange, x + approxRange], 'including');
 
 type ResolveType = 'all' | 'allSettled';
 const promiseResolver: Record<ResolveType, typeof Promise.all> = {

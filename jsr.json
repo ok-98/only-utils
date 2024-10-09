@@ -1,0 +1,5 @@
+{
+  "name": "@only/utils",
+  "version": "0.4.16",
+  "exports": "./lib/only-utils.ts"
+}

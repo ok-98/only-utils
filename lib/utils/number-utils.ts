@@ -4,7 +4,10 @@
  * @param includingZero - Optional. Specifies whether zero should be considered as a positive number. Default is true.
  * @returns True if the number is positive, false otherwise.
  */
-export const isPositive = (value: number, includingZero: boolean = true) =>
+export const isPositive = (
+  value: number,
+  includingZero: boolean = true,
+): boolean =>
   includingZero
     ? isPositiveIncludingZero(value)
     : isPositiveExcludingZero(value);

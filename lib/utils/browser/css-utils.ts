@@ -1,4 +1,4 @@
-import { InvalidOperationError } from 'errors-es';
+import { TOrUndefined } from '../../only-utils.ts';
 import { CssVar, CssVarName } from '../../types/helpers/browser-helpers.ts';
 import { areNotDefined, isNotDefined } from '../nullish-utils.js';
 
@@ -43,7 +43,7 @@ export const getCssVarValue = (
   value: CssVar | CssVarName,
   element?: Element,
   pseudoElt?: string,
-) => {
+): TOrUndefined<string> => {
   const cssVarName = isCssVar(value) ? getCssVariableName(value) : value;
 
   if (isNotDefined(cssVarName)) {
@@ -51,9 +51,7 @@ export const getCssVarValue = (
   }
 
   if (areNotDefined([document, element])) {
-    throw new InvalidOperationError(
-      'This function can be only executed in browser context',
-    );
+    throw new Error('This function can be only executed in browser context');
   }
 
   return getComputedValue(cssVarName, element ?? document.body, pseudoElt);
@@ -73,11 +71,9 @@ export const getComputedValue = (
   value: string,
   element: Element,
   pseudoElt?: string,
-) => {
+): string => {
   if (isNotDefined(window)) {
-    throw new InvalidOperationError(
-      'This function can be only executed in browser context',
-    );
+    throw new Error('This function can be only executed in browser context');
   }
 
   const computedStyle = window.getComputedStyle(element, pseudoElt);
