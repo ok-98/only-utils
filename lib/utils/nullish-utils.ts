@@ -1,11 +1,11 @@
-import { not } from 'boolchain/nodeps';
 import {
   Nullish,
-  OptionalT as Optional,
+  Optional,
   SimpleFunction,
   TOrNull,
   TOrUndefined,
-} from 'only-types';
+} from '@only/types';
+import { not } from 'boolchain/nodeps';
 
 /**
  * Checks if a value is defined (not null or undefined).

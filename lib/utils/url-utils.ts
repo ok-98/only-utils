@@ -1,5 +1,6 @@
-import { CtorParam1, CtorParam2, TOrUndefined } from 'only-types';
+import { CtorParam1, CtorParam2, TOrUndefined } from '@only/types';
 import type { URL } from 'url';
+import { tryCatchOrUndefined } from './error.ts';
 import { isDefined } from './nullish-utils.ts';
 
 const requireURL = (
@@ -20,12 +21,7 @@ export const toUrl = (
   value: CtorParam1<typeof URL>,
   base?: CtorParam2<typeof URL>,
 ): TOrUndefined<URL> => {
-  try {
-    const url = requireURL(value, base);
-    return url;
-  } catch (e) {}
-
-  return undefined;
+  return tryCatchOrUndefined(requireURL)(value, base);
 };
 
 /**

@@ -5,7 +5,7 @@ import {
   RemoveFunctions,
   RemoveValues,
   SimpleFunction,
-} from 'only-types';
+} from '@only/types';
 import { isEqual } from '../generic-utils/generic-utils.js';
 import { filterNullishArray } from './collection-utils/list-utils.ts';
 import { EMPTY_OBJECT } from './const-utils.ts';

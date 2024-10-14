@@ -1,4 +1,4 @@
-import { CssVar } from 'only-types';
+import { CssVar } from '@only/types';
 import { describe, expect, it } from 'vitest';
 import { getCssVariableName, toCssVar } from './css-utils.ts';
 

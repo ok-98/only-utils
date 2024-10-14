@@ -1,4 +1,4 @@
-import { RemoveFunctions } from 'only-types';
+import { RemoveFunctions } from '@only/types';
 import { removeFunctions } from '../object-utils.ts';
 
 /**

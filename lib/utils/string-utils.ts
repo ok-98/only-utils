@@ -1,9 +1,4 @@
-import {
-  Braces,
-  OptionalT as Optional,
-  Quotation,
-  TOrUndefined,
-} from 'only-types';
+import { Braces, Optional, Quotation, TOrUndefined } from '@only/types';
 import { isDefined } from './nullish-utils.js';
 
 /**

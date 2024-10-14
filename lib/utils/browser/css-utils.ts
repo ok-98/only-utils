@@ -1,4 +1,4 @@
-import { CssVar, CssVarName, TOrUndefined } from 'only-types';
+import { CssVar, CssVarName, TOrUndefined } from '@only/types';
 import { areNotDefined, isNotDefined } from '../nullish-utils.js';
 
 const isCssVarName = (value: string): value is CssVarName =>

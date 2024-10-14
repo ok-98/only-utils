@@ -1,4 +1,4 @@
-import { ParamArgs } from 'only-types';
+import { ParamArgs } from '@only/types';
 
 /**
  * An empty arrow function that takes any number of arguments and returns void.

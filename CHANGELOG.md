@@ -1,5 +1,11 @@
 # only-utils
 
+## 0.6.0
+
+### Minor Changes
+
+- jsr release
+
 ## 0.5.0
 
 ### Minor Changes
