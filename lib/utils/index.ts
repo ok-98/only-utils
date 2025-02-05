@@ -36,6 +36,7 @@ export * from './browser/index.js';
 export * from './collection-utils/index.js';
 
 export { Optional } from 'better-optional';
+
 export {
   and,
   andAsync,

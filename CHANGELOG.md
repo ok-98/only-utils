@@ -6,6 +6,12 @@
 
 - First major release
 
+## 0.6.2
+
+### Patch Changes
+
+- fixed type imports
+
 ## 0.6.0
 
 ### Minor Changes
