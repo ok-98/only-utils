@@ -1,4 +1,4 @@
-import { AnyFunction, AsyncFunctionOrNot, PromiseOrAwaited } from '@only/types';
+import { AnyFunction, AsyncFunctionOrNot, PromiseOrAwaited } from 'only-types';
 
 /**
  * Checks if a value is a Promise.

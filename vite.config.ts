@@ -10,9 +10,13 @@ export default defineConfig({
     dts({
       include: ['lib'],
       exclude: ['**/*.test.ts', 'generic-utils/**/*.ts'],
-      rollupTypes: true,
       rollupConfig: {
-        bundledPackages: ['boolchain', 'better-optional', 'only-utils'],
+        bundledPackages: [
+          'boolchain',
+          'better-optional',
+          'only-types',
+          'only-utils',
+        ],
       },
     }),
   ],

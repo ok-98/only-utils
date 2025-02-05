@@ -14,7 +14,7 @@ import type {
   SetLike,
   SimpleFunction,
   TOrUndefined,
-} from '@only/types';
+} from 'only-types';
 import { EMPTY_OBJECT } from '../const-utils.ts';
 import { EMPTY_ARROW_FUNCTION } from '../function-utils.ts';
 import { isDefined } from '../nullish-utils.ts';

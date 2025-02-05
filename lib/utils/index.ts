@@ -35,7 +35,7 @@ export { isUrlValid, toUrl } from './url-utils.js';
 export * from './browser/index.js';
 export * from './collection-utils/index.js';
 
-export { Optional } from 'better-optional/nodeps';
+export { Optional } from 'better-optional';
 export {
   and,
   andAsync,
@@ -48,7 +48,7 @@ export {
   orAsync,
   xor,
   xorAsync,
-} from 'boolchain/nodeps';
+} from 'boolchain';
 
 export { EMPTY_ARRAY, EMPTY_OBJECT } from './const-utils.js';
 
@@ -56,6 +56,8 @@ export {
   EMPTY_ARROW_FUNCTION,
   EMPTY_ASYNC_ARROW_FUNCTION,
   identity,
+  identityFunc,
+  isFunction,
 } from './function-utils.js';
 
 export {
@@ -96,18 +98,7 @@ export {
 export { toDate } from './date-utils.js';
 
 export {
-  dirExtists,
-  dirExtistsSync,
-  fileExtists,
-  fileExtistsSync,
-  getFileSize,
-  getFileSizeSync,
-  isDirectory,
-  isDirectorySync,
-  isFile,
-  isFileSync,
-  mkDirIfNotExists,
-  mkDirIfNotExistsSync,
-  pathAccess,
-  pathAccessSync,
-} from './file-utils.ts';
+  isError,
+  tryCatchOrUndefined,
+  tryCatchOrUndefinedAsync,
+} from './error.ts';

@@ -1,4 +1,4 @@
-import { CtorParam1, CtorParam2, TOrUndefined } from '@only/types';
+import { CtorParam1, CtorParam2, TOrUndefined } from 'only-types';
 import type { URL } from 'url';
 import { tryCatchOrUndefined } from './error.ts';
 import { isDefined } from './nullish-utils.ts';

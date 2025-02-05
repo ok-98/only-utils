@@ -1,4 +1,4 @@
-import { ParamArgs } from '@only/types';
+import { ParamArgs } from 'only-types';
 
 /**
  * An empty arrow function that takes any number of arguments and returns void.
@@ -44,3 +44,12 @@ export const identity = <T>(value: T) => value;
 export const identityFunc = <T extends (...args: ParamArgs<T>[]) => R, R>(
   func: T,
 ): T => ((...args: ParamArgs<T>[]) => func(...args)) as T;
+
+/**
+ * Checks if the given value is a function.
+ *
+ * @param value - The value to check.
+ * @returns True if the value is a function, otherwise false.
+ */
+export const isFunction = (value: unknown): value is Function =>
+  typeof value === 'function';

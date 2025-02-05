@@ -1,11 +1,11 @@
+import { not } from 'boolchain';
 import {
   Nullish,
   Optional,
   SimpleFunction,
   TOrNull,
   TOrUndefined,
-} from '@only/types';
-import { not } from 'boolchain/nodeps';
+} from 'only-types';
 
 /**
  * Checks if a value is defined (not null or undefined).
@@ -52,17 +52,8 @@ export const areNotDefined = <T>(
  * @param value - The optional value to convert.
  * @returns The corresponding value if it is defined, otherwise undefined.
  */
-export const toU = <T>(value: Optional<T>): TOrUndefined<T> =>
+export const asValueOrUndefined = <T>(value: Optional<T>): TOrUndefined<T> =>
   isDefined(value) ? value : undefined;
-
-/**
- * Converts an optional value to its corresponding value or undefined.
- *
- * @param value - The optional value to convert.
- * @returns The corresponding value if it is defined, otherwise undefined.
- */
-export const asValueOrUndefined = toU;
-
 /**
  * Returns the value if it is defined, otherwise returns null.
  *
